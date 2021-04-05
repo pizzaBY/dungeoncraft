@@ -168,7 +168,7 @@
                         <div class="mb-3" style="max-width: 540px;">
                             <div class="row g-0">
                                 <div class="pt-3 col-md-4 d-flex justify-content-center align-middle">
-                                    <img src="../assets/images/icons/profile.png" width="100px" height="100px">
+                                    <img src="../assets/images/icons/profile.png" width="100" height="100">
                                     <div class="icon-dev"></div>
                                 </div>
                                 <div class="col-md-8">
@@ -179,7 +179,7 @@
                                     </div>
                                 </div>
                                 <div class="pt-3 col-md-4 d-flex justify-content-center align-middle">
-                                    <img src="../assets/images/icons/profile.png" width="100px" height="100px">
+                                    <img src="../assets/images/icons/profile.png" width="100" height="100">
                                     <div class="icon-dev"></div>
                                 </div>
                                 <div class="col-md-8">
@@ -190,7 +190,7 @@
                                     </div>
                                 </div>
                                 <div class="pt-3 col-md-4 d-flex justify-content-center align-middle">
-                                    <img src="../assets/images/icons/profile.png" width="100px" height="100px">
+                                    <img src="../assets/images/icons/profile.png" width="100" height="100">
                                     <div class="icon-moder"></div>
                                 </div>
                                 <div class="col-md-8">
@@ -220,7 +220,7 @@
                         <div class="mb-3" style="max-width: 540px;">
                             <div class="row g-0">
                                 <div class="pt-3 col-md-4 d-flex justify-content-center">
-                                    <img src="../assets/images/icons/vk.png" width="100px" height="100px">
+                                    <img src="../assets/images/icons/vk.png" width="100" height="100">
                                 </div>
                                 <div class="col-md-8">
                                     <div class="card-body">
@@ -228,7 +228,7 @@
                                     </div>
                                 </div>
                                 <a href="/" class="pt-3 col-md-4 d-flex justify-content-center">
-                                    <img src="../assets/images/icons/youtube.png" width="100px" height="100px">
+                                    <img src="../assets/images/icons/youtube.png" width="100" height="100">
                                 </a>
                                 <div class="col-md-8">
                                     <div class="card-body">
@@ -236,7 +236,7 @@
                                     </div>
                                 </div>
                                 <div class="pt-3 col-md-4 d-flex justify-content-center">
-                                    <img src="../assets/images/icons/discord.png" width="100px" height="100px">
+                                    <img src="../assets/images/icons/discord.png" width="100" height="100">
                                 </div>
                                 <div class="col-md-8">
                                     <div class="card-body">

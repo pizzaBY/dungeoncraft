@@ -14,7 +14,8 @@
           class="active"
         ></li>
         <li data-bs-target="#MySlider" data-bs-slide-to="1"></li>
-        <li data-bs-target="#MySlider" data-bs-slide-to="2"></li>
+        <li data-bs-target="#MySlider
+        " data-bs-slide-to="2"></li>
       </ol>
       <div class="carousel-inner">
         <div class="carousel-item active">
