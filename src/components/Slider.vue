@@ -3,18 +3,18 @@
   <div class="bg-lefts"></div>
   <div class="container" data-aos="fade-up">
     <div
-      id="carouselExampleIndicators"
+      id="MySlider"
       class="carousel slide"
        data-bs-ride="carousel"
     >
       <ol class="carousel-indicators">
         <li
-          data-bs-target="#carouselExampleIndicators"
+          data-bs-target="#MySlider"
           data-bs-slide-to="0"
           class="active"
         ></li>
-        <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></li>
-        <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></li>
+        <li data-bs-target="#MySlider" data-bs-slide-to="1"></li>
+        <li data-bs-target="#MySlider" data-bs-slide-to="2"></li>
       </ol>
       <div class="carousel-inner">
         <div class="carousel-item active">

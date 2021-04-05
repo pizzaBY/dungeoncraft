@@ -57,6 +57,7 @@ tbody, td, tfoot, th, thead, tr {
 }
 .carousel-indicators .active {
     background-color: #fba020 !important;
+	opacity: 1 !important;
 }
 
 .dropdown-menu {
