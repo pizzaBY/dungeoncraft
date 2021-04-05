@@ -40,21 +40,25 @@ tbody, td, tfoot, th, thead, tr {
 
 /* Шапка сайта */
 .carousel-indicators li {
-    box-sizing: content-box;
-    flex: 0 1 auto;
-    width: 20px;
-    height: 20px;
-    margin-right: 3px;
-    margin-left: 3px;
-    text-indent: -999px;
-    cursor: pointer;
-    background-color: #ffba20;
-    background-clip: padding-box;
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
-    opacity: .5;
-    transition: opacity .6s ease;
+    box-sizing: content-box !important;
+    flex: 0 1 auto !important;
+    width: 20px !important;
+    height: 20px !important;
+    margin-right: 3px !important;
+    margin-left: 3px !important;
+    text-indent: -999px !important;
+    cursor: pointer !important;
+    background-color: #ffba20 !important;
+    background-clip: padding-box !important;
+    border-top: 10px solid transparent !important;
+    border-bottom: 10px solid transparent !important;
+    opacity: .5 !important;
+    transition: opacity .6s ease !important;
 }
+.carousel-indicators .active {
+    background-color: #fba020 !important;
+}
+
 .dropdown-menu {
     border: none;
     border-radius: 15px;
