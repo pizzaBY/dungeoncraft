@@ -98,18 +98,18 @@
                         <div class="line-sidebar"></div>
                         <div class="d-flex justify-content-center bd-highlight">
                             <div class="p-2 bd-highlight">
-                                <a type="button" data-toggle="modal" data-target="#modalauthorization"
+                                <a type="button" data-bs-toggle="modal" data-bs-target="#modalauthorization"
                                     class="btn btn-warning btn-lg button-auto">Авторизация</a>
                             </div>
                             <div class="p-2 flex-shrink-1 bd-highlight">
-                                <a type="button" data-toggle="modal" data-target="#modalclosed"
+                                <a type="button" data-bs-toggle="modal" data-bs-target="#modalclosed"
                                     class="btn btn-warning btn-lg button-lock"><i class="bi-shield-lock"></i></a>
                             </div>
                         </div>
 
                         <div class="d-flex justify-content-center bd-highlight">
                             <div class="bd-highlight">
-                                <a type="button" data-toggle="modal" data-target="#modalregister"
+                                <a type="button" data-bs-toggle="modal" data-bs-target="#modalregister"
                                     class="btn btn-warning btn-lg button-reg">Регистрация</a>
                             </div>
                         </div>
@@ -119,140 +119,15 @@
                 <!-- Авторизация -->
 
                 <!-- Мониторинг -->
-                <div class="card-block">
-                    <div class="card-body justify-content-center">
-                        <h3 class="text-sidebar">Мониторинг</h3>
-                        <div class="line-sidebar"></div>
-                        <div class="mb-3" style="max-width: 540px;">
-                            <div class="row g-0">
-                                <div class="pt-3 col-md-4 d-flex justify-content-center align-middle">
-                                    <img src="../assets/images/icons/classic.png" width="100px" height="100px">
-                                </div>
-                                <div class="col-md-8">
-                                    <div class="card-body">
-                                        <h5 class="name-server">Classic</h5>
-                                        <p class="sub-server">Онлайн 25/100</p>
-                                        <div class="progress">
-                                            <div class="progress-bar" role="progressbar" style="width: 25%; background-color: #00c629;"
-                                                aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="pt-3 col-md-4 d-flex justify-content-center align-middle">
-                                    <img src="../assets/images/icons/magic.png" width="100px" height="100px">
-                                </div>
-                                <div class="col-md-8">
-                                    <div class="card-body">
-                                        <h5 class="name-server">Magic and RPG</h5>
-                                        <p class="sub-server">Онлайн 45/100</p>
-                                        <div class="progress">
-                                            <div class="progress-bar" role="progressbar" style="width: 45%; background-color: #b824c5;"
-                                                aria-valuenow="45" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="line-sidebar"></div>
-                        <h5 class="mon-text">Рекорд за сутки: 25</h5>
-                        <h5 class="mon-text">Абсолютный рекорд: 147</h5>
-                    </div>
-                </div>
+                <cMonitoring />
                 <!-- Мониторинг -->
 
                 <!-- Голосование -->
-                <div class="card-block">
-                    <div class="card-body justify-content-center">
-                        <h3 class="text-sidebar">Голосование</h3>
-                        <div class="line-sidebar"></div>
-                        <div class="mb-3" style="max-width: 540px;">
-                            <div class="row g-0">
-                                <div class="pt-3 col-md-4 d-flex justify-content-center align-middle">
-                                    <img src="../assets/images/icons/profile.png" width="100" height="100">
-                                    <div class="icon-dev"></div>
-                                </div>
-                                <div class="col-md-8">
-                                    <div class="card-body">
-                                        <h5 class="name-server">Eltazaris</h5>
-                                        <p class="sub-server">Госовал в McTop</p>
-                                        <p style="line-height: 0px;" class="sub-server">12 минут назад</p>
-                                    </div>
-                                </div>
-                                <div class="pt-3 col-md-4 d-flex justify-content-center align-middle">
-                                    <img src="../assets/images/icons/profile.png" width="100" height="100">
-                                    <div class="icon-dev"></div>
-                                </div>
-                                <div class="col-md-8">
-                                    <div class="card-body">
-                                        <h5 class="name-server">Lonely_Wolf</h5>
-                                        <p class="sub-server">Госовал в TopCraft</p>
-                                        <p style="line-height: 0px;" class="sub-server">12 минут назад</p>
-                                    </div>
-                                </div>
-                                <div class="pt-3 col-md-4 d-flex justify-content-center align-middle">
-                                    <img src="../assets/images/icons/profile.png" width="100" height="100">
-                                    <div class="icon-moder"></div>
-                                </div>
-                                <div class="col-md-8">
-                                    <div class="card-body">
-                                        <h5 class="name-server">pizza</h5>
-                                        <p class="sub-server">Госовал в TopCraft</p>
-                                        <p style="line-height: 0px;" class="sub-server">12 минут назад</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="line-sidebar"></div>
-                        <h5 class="mon-text">За каждый голос вы получаете бонус</h5>
-                        <div class="d-flex justify-content-center bd-highlight">
-                            <a href="#" type="button" data-toggle="modal" data-target="#modalvotes"
-                                class="btn btn-warning btn-lg button-vote">Голосовать</a>
-                        </div>
-                    </div>
-                </div>
+                <cVoting />
                 <!-- Голосование -->
 
                 <!-- Социальные сети -->
-                <div class="card-block">
-                    <div class="card-body justify-content-center">
-                        <h3 class="text-sidebar">Наши соц. сети</h3>
-                        <div class="line-sidebar"></div>
-                        <div class="mb-3" style="max-width: 540px;">
-                            <div class="row g-0">
-                                <div class="pt-3 col-md-4 d-flex justify-content-center">
-                                    <img src="../assets/images/icons/vk.png" width="100" height="100">
-                                </div>
-                                <div class="col-md-8">
-                                    <div class="card-body">
-                                        <h5 class="name-soc">Сообщество Вконтакте</h5>
-                                    </div>
-                                </div>
-                                <a href="/" class="pt-3 col-md-4 d-flex justify-content-center">
-                                    <img src="../assets/images/icons/youtube.png" width="100" height="100">
-                                </a>
-                                <div class="col-md-8">
-                                    <div class="card-body">
-                                        <h5 class="name-soc">YouTube<br>канал</h5>
-                                    </div>
-                                </div>
-                                <div class="pt-3 col-md-4 d-flex justify-content-center">
-                                    <img src="../assets/images/icons/discord.png" width="100" height="100">
-                                </div>
-                                <div class="col-md-8">
-                                    <div class="card-body">
-                                        <h5 class="name-soc">Discord<br>канал</h5>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="line-sidebar"></div>
-                        <h5 class="mon-text">Приглашай друзей и получай бонусы</h5>
-                        <div class="d-flex justify-content-center bd-highlight">
-                            <a href="#" data-toggle="modal" data-target="#modalinvite" type="button"
-                                class="btn btn-warning btn-lg button-vote">Пригласить</a>
-                        </div>
-                    </div>
-                </div>
+                <cSocial />
                 <!-- Социальные сети -->
             </div>
         </div>
@@ -260,8 +135,17 @@
 </template>
 
 <script>
+import cSocial from '@/components/blocks/Social.vue'
+import cVoting from '@/components/blocks/Voting.vue'
+import cMonitoring from '@/components/blocks/Monitoring.vue'
+
 export default {
     name: "News",
+  components: {
+    cSocial,
+    cVoting,
+    cMonitoring
+  }
 }
 </script>
 

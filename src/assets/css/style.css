@@ -635,17 +635,17 @@ tbody, td, tfoot, th, thead, tr {
     border-radius: 25px;
 }
 .text-mod {
-    font-weight: 900;
-    color: #303030;
-    text-align: center;
+    font-weight: 900 !important;
+    color: #303030 !important;
+    text-align: center !important;
 }  
 .head-mod {
-    display: flex;
-    padding: 5px 10px;
+    display: flex !important;
+    padding: 5px 10px !important;
 } 
 .head-mod .close {
-    padding: 1rem 1rem;
-    margin: -1rem -1rem -1rem auto;
+    padding: 1rem 1rem !important;
+    margin: -1rem -1rem -1rem auto !important;
 }
 .form-check-input:checked {
     background-color: #ffba20;
