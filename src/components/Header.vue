@@ -55,9 +55,9 @@
               >
                 <li><router-link class="dropdown-item" :to="{ name: 'rRules'}" role="navigation">Правила </router-link></li>
                 <li>
-                  <a class="dropdown-item" href="ban-list.html">Бан-лист</a>
+                  <router-link class="dropdown-item" :to="{ name: 'rBanlist'}" role="navigation">Бан-лист</router-link>
                 </li>
-                <li><a class="dropdown-item" href="top.html">ТОП 5</a></li>
+                <li><router-link class="dropdown-item" :to="{ name: 'rTops'}" role="navigation" >ТОП 5</router-link></li>
               </ul>
             </li>
             <li class="nav-item button-head dropdown">
