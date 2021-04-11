@@ -121,13 +121,13 @@
     <!-- Модальное окно регистрации -->
 
     <!-- Модальное окно забыл пароль -->
-    <div class="modal fade" id="modalclosed" data-backdrop="static" data-keyboard="false" tabindex="-1"
+    <div class="modal fade" id="modalclosed" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
         aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-bg2">
                 <div class="head-mod">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
+                    <button type="button" class="btn-close close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"></span>
                     </button>
                 </div>
                 <div class="modal-body d-flex justify-content-center">
@@ -167,13 +167,13 @@
     <!-- Модальное окно забыл пароль -->
 
     <!-- Модальное окно голосование -->
-    <div class="modal fade" id="modalvotes" data-backdrop="static" data-keyboard="false" tabindex="-1"
+    <div class="modal fade" id="modalvotes" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
         aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-bg2">
                 <div class="head-mod">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
+                    <button type="button" class="btn-close close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"></span>
                     </button>
                 </div>
                 <div class="modal-body d-flex justify-content-center">
@@ -229,13 +229,13 @@
     <!-- Модальное окно голосование -->
 
     <!-- Модальное окно скачать клиент -->
-    <div class="modal fade" id="modalclient" data-backdrop="static" data-keyboard="false" tabindex="-1"
+    <div class="modal fade" id="modalclient" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
         aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-bg2">
                 <div class="head-mod">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
+                    <button type="button" class="btn-close close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"></span>
                     </button>
                 </div>
                 <div class="modal-body d-flex justify-content-center">
@@ -285,13 +285,13 @@
     <!-- Модальное окно скачать клиент -->
 
     <!-- Модальное окно пригласить -->
-    <div class="modal fade" id="modalinvite" data-backdrop="static" data-keyboard="false" tabindex="-1"
+    <div class="modal fade" id="modalinvite" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
         aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-bg2">
                 <div class="head-mod">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
+                    <button type="button" class="btn-close close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"></span>
                     </button>
                 </div>
                 <div class="modal-body d-flex justify-content-center">

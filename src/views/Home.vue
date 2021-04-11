@@ -2,6 +2,7 @@
  <cHeader msg="Welcome to Your Vue.js App"/>
  <cSlider />
  <cNews />
+ <cFooter/>
     <!-- <img alt="Vue logo" src="../assets/logo.png"> -->
     
 </template>
@@ -11,13 +12,15 @@
 import cHeader from '@/components/Header.vue'
 import cSlider from '@/components/Slider.vue'
 import cNews from '@/components/News.vue'
+import cFooter from '@/components/blocks/Footer.vue'
 
 export default {
-  name: 'Home',
+  name: 'pHome',
   components: {
     cHeader,
     cSlider,
-    cNews
+    cNews,
+    cFooter
   }
 }
 </script>

@@ -7,8 +7,8 @@
         <button
           class="navbar-toggler"
           type="button"
-          data-toggle="collapse"
-          data-target="#navbarTogglerDemo03"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarTogglerDemo03"
           aria-controls="navbarTogglerDemo03"
           aria-expanded="false"
           aria-label="Toggle navigation"
@@ -17,7 +17,12 @@
         </button>
         <!-- Кнопка для смартфона -->
         <a class="navbar-brand scalelogo" href="/">
-          <img src="../assets/images/headerlogo.png" width="74" height="47" alt="" />
+          <img
+            src="../assets/images/headerlogo.png"
+            width="74"
+            height="47"
+            alt=""
+          />
         </a>
         <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
           <ul
@@ -26,19 +31,20 @@
           >
             <li class="nav-item button-head">
               <div class="ico-buttonHead main-ico"></div>
-              <router-link class="nav-link active" aria-current="page" to="/">Главная</router-link>
-              
+              <router-link class="nav-link" :to="{ name: 'rHome'}" role="navigation"
+                >Главная</router-link
+              >
             </li>
             <li class="nav-item button-head">
               <div class="ico-buttonHead shop-ico"></div>
-              <router-link class="nav-link" aria-current="page" to="/services">Услуги</router-link>
+              <router-link class="nav-link" :to="{ name: 'rServices'}" role="navigation">Услуги</router-link>
             </li>
             <li class="nav-item button-head dropdown">
               <div class="ico-buttonHead rules-ico"></div>
               <a
                 class="nav-link dropdown-toggle"
                 id="navbarDarkDropdownMenuLink"
-                data-toggle="dropdown"
+                data-bs-toggle="dropdown"
                 aria-haspopup="true"
                 aria-expanded="false"
                 >Разделы</a
@@ -59,7 +65,7 @@
               <a
                 class="nav-link dropdown-toggle"
                 id="navbarDarkDropdownMenuLink"
-                data-toggle="dropdown"
+                data-bs-toggle="dropdown"
                 aria-haspopup="true"
                 aria-expanded="false"
                 >Сервера</a
@@ -86,8 +92,8 @@
             <a
               href="#"
               type="button"
-              data-toggle="modal"
-              data-target="#modalclient"
+              data-bs-toggle="modal"
+              data-bs-target="#modalclient"
               class="btn btn-outline-warning button-client"
               >Скачать клиент</a
             >
@@ -109,6 +115,4 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-
-</style>
+<style scoped></style>
