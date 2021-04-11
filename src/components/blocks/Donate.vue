@@ -1,7 +1,7 @@
 <template>
   <div class="container mb-5">
-    <ul class="nav nav-pills mb-5" id="pills-tab" role="tablist">
-      <li class="nav-item betw-donat" role="presentation">
+    <ul class="nav nav-pills mb-5 d-flex justify-content-between" id="pills-tab" role="tablist">
+      <li class="nav-item" role="presentation">
         <a
           class="nav-link active btn bg-donat"
           id="pills-home-tab"
@@ -13,7 +13,7 @@
           >Привилегии</a
         >
       </li>
-      <li class="nav-item betw-donat" role="presentation">
+      <li class="nav-item" role="presentation">
         <a
           class="nav-link bg-donat"
           id="pills-profile-tab"
@@ -25,7 +25,7 @@
           >Наборы вещей</a
         >
       </li>
-      <li class="nav-item betw-donat" role="presentation">
+      <li class="nav-item" role="presentation">
         <a
           class="nav-link bg-donat"
           id="pills-contact-tab"
@@ -37,7 +37,7 @@
           >Стикерпаки</a
         >
       </li>
-      <li class="nav-item betw-donat" role="presentation">
+      <li class="nav-item" role="presentation">
         <a
           class="nav-link bg-donat"
           id="gold-coins-tab"
@@ -49,7 +49,7 @@
           >Gold Coin's</a
         >
       </li>
-      <li class="nav-item dropdown betw-donat">
+      <li class="nav-item dropdown">
         <a
           class="nav-link dropdown-toggle bg-donat"
           data-bs-toggle="dropdown"
@@ -59,9 +59,21 @@
           >Выбор сервера</a
         >
         <ul class="dropdown-menu">
-          <li><a class="dropdown-item" @click="ChangeServer('all')">Показать все...</a></li>
-          <li><a class="dropdown-item" @click="ChangeServer('classic')">Classic</a></li>
-          <li><a class="dropdown-item" @click="ChangeServer('magicrpg')">Magic and RPG</a></li>
+          <li>
+            <a class="dropdown-item" @click="ChangeServer('all')"
+              >Показать все...</a
+            >
+          </li>
+          <li>
+            <a class="dropdown-item" @click="ChangeServer('classic')"
+              >Classic</a
+            >
+          </li>
+          <li>
+            <a class="dropdown-item" @click="ChangeServer('magicrpg')"
+              >Magic and RPG</a
+            >
+          </li>
         </ul>
       </li>
     </ul>
@@ -73,84 +85,56 @@
         aria-labelledby="pills-home-tab"
       >
         <div class="row">
-          <div class="col-sm-4">
-            <div class="d-flex">
-              <a href="#" data-bs-toggle="modal" data-bs-target="#modalbuy" v-show="activeServer == 'all' || activeServer == 'classic'">
-                <div class="card-stocks stocks-b2">
-                  <div class="block-hover">
-                    <h1 class="auchover-h5">Купить</h1>
-                  </div>
-                  <div class="discount-button">15%</div>
-                  <img
-                    src="../../assets/images/donat/vip.png"
-                    class="card-img-top donat-img"
-                    alt="..."
-                  />
-                  <div class="price-button2">
-                    50<img
-                      src="../../assets/images/icons/ruble.png"
-                      width="14"
-                      height="14"
-                    />
-                  </div>
-                  <div class="">
-                    <p class="donat-name">"Вип"</p>
-                  </div>
+          <div class="col-sm-2 pb-4" v-show="activeServer == 'all' || activeServer == 'classic'" v-for="n in 6" :key="n">
+            <a href="#" data-toggle="modal" data-target="#modalbuy">
+              <div class="card-stocks stocks-b2">
+                <div class="block-hover">
+                  <h1 class="auchover-h5">Купить</h1>
                 </div>
-              </a>
-              <a href="#" data-bs-toggle="modal" data-bs-target="#modalbuy" v-show="activeServer == 'all' || activeServer == 'magicrpg'">
-                <div class="card-stocks stocks-b3">
-                  <div class="block-hover">
-                    <h1 class="auchover-h5">Купить</h1>
-                  </div>
-                  <div class="discount-button">15%</div>
-                  <img
-                    src="../../assets/images/donat/premium.png"
-                    class="card-img-top donat-img"
-                    alt="..."
+                <div class="discount-button">15%</div>
+                <img
+                  src="../../assets/images/donat/vip.png"
+                  class="card-img-top donat-img"
+                  alt="..."
+                />
+                <div class="price-button2">
+                  50<img
+                    src="../../assets/images/icons/ruble.png"
+                    width="14"
+                    height="14"
                   />
-                  <div class="price-button2">
-                    110<img
-                      src="../../assets/images/icons/ruble.png"
-                      width="14"
-                      height="14"
-                    />
-                  </div>
-                  <div class="">
-                    <p class="donat-name">"Премиум"</p>
-                  </div>
                 </div>
-              </a>
-            </div>
+                <div class="">
+                  <p class="donat-name">Вип {{ n }}</p>
+                </div>
+              </div>
+            </a>
           </div>
-          <div class="col-sm-4">
-            <div class="d-flex">
-              <a href="#" data-bs-toggle="modal" data-bs-target="#modalbuy" v-show="activeServer == 'all' || activeServer == 'classic'">
-                <div class="card-stocks stocks-b2">
-                  <div class="block-hover">
-                    <h1 class="auchover-h5">Купить</h1>
-                  </div>
-                  <div class="discount-button">34%</div>
-                  <img
-                    src="../../assets/images/donat/magic.png"
-                    class="card-img-top donat-img"
-                    alt="..."
-                  />
-                  <div class="price-button">
-                    249<img
-                      src="../../assets/images/icons/ruble.png"
-                      width="14"
-                      height="14"
-                    />
-                  </div>
-                  <div class="">
-                    <p class="donat-name">"Волшебник"</p>
-                  </div>
+          <div class="col-sm-2 pb-4" v-show="activeServer == 'all' || activeServer == 'magicrpg'">
+            <a href="#" data-toggle="modal" data-target="#modalbuy">
+              <div class="card-stocks stocks-b2">
+                <div class="block-hover">
+                  <h1 class="auchover-h5">Купить</h1>
                 </div>
-              </a>
-            </div>
+                <div class="discount-button">15%</div>
+                <img
+                  src="../../assets/images/donat/vip.png"
+                  class="card-img-top donat-img"
+                  alt="..."
+                />
+                <div class="price-button2">
+                  50<img
+                    src="../../assets/images/icons/ruble.png"
+                    width="14"
+                    height="14"
+                  />
+                </div>
+                <div class="">
+                  <p class="donat-name">Вип MGRP</p>
+                </div>
+              </div>
+            </a>
           </div>
-          <div class="col-sm-4"></div>
         </div>
       </div>
       <div
@@ -183,17 +167,17 @@
 
 <script>
 export default {
-    name: "cDonates",
-    data() {
-        return {
-            activeServer: "all"
-        };
+  name: "cDonates",
+  data() {
+    return {
+      activeServer: "all",
+    };
+  },
+  methods: {
+    ChangeServer(server) {
+      // `this` will refer to the component instance
+      this.activeServer = server;
     },
-    methods: {
-        ChangeServer(server) {
-        // `this` will refer to the component instance
-            this.activeServer = server
-        }
-    }
-}
+  },
+};
 </script>

@@ -53,7 +53,7 @@
                 class="dropdown-menu dropdown-menu-dark"
                 aria-labelledby="navbarDarkDropdownMenuLink"
               >
-                <li><a class="dropdown-item" href="rules.html">Правила</a></li>
+                <li><router-link class="dropdown-item" :to="{ name: 'rRules'}" role="navigation">Правила </router-link></li>
                 <li>
                   <a class="dropdown-item" href="ban-list.html">Бан-лист</a>
                 </li>
