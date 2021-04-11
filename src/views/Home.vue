@@ -1,8 +1,11 @@
 <template>
- <cHeader msg="Welcome to Your Vue.js App"/>
+ 
+<cHeader msg="Welcome to Your Vue.js App"/>
  <cSlider />
  <cNews />
  <cFooter/>
+
+ 
     <!-- <img alt="Vue logo" src="../assets/logo.png"> -->
     
 </template>
@@ -21,6 +24,11 @@ export default {
     cSlider,
     cNews,
     cFooter
-  }
+  },
+  data() {
+    return {
+      loaded: false,
+    };
+  },
 }
 </script>

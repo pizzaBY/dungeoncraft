@@ -97,13 +97,13 @@
                   <b>Аукцион!</b>
                 </h2>
                 <br />
-                <a
+                <router-link
                   style="padding: 15px"
-                  href="start.html"
+                  :to="{ name: 'rStart' }"
                   class="btn btn-outline-warning button-start"
                   type="submit"
                   >Начать игру<i class="start-icon"></i
-                ></a>
+                ></router-link>
               </div>
             </div>
             <div class="col-5 d-flex">
