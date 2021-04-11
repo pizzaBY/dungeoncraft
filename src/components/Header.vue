@@ -31,13 +31,21 @@
           >
             <li class="nav-item button-head">
               <div class="ico-buttonHead main-ico"></div>
-              <router-link class="nav-link" :to="{ name: 'rHome'}" role="navigation"
+              <router-link
+                class="nav-link"
+                :to="{ name: 'rHome' }"
+                role="navigation"
                 >Главная</router-link
               >
             </li>
             <li class="nav-item button-head">
               <div class="ico-buttonHead shop-ico"></div>
-              <router-link class="nav-link" :to="{ name: 'rServices'}" role="navigation">Услуги</router-link>
+              <router-link
+                class="nav-link"
+                :to="{ name: 'rServices' }"
+                role="navigation"
+                >Услуги</router-link
+              >
             </li>
             <li class="nav-item button-head dropdown">
               <div class="ico-buttonHead rules-ico"></div>
@@ -53,11 +61,30 @@
                 class="dropdown-menu dropdown-menu-dark"
                 aria-labelledby="navbarDarkDropdownMenuLink"
               >
-                <li><router-link class="dropdown-item" :to="{ name: 'rRules'}" role="navigation">Правила </router-link></li>
                 <li>
-                  <router-link class="dropdown-item" :to="{ name: 'rBanlist'}" role="navigation">Бан-лист</router-link>
+                  <router-link
+                    class="dropdown-item"
+                    :to="{ name: 'rRules' }"
+                    role="navigation"
+                    >Правила
+                  </router-link>
                 </li>
-                <li><router-link class="dropdown-item" :to="{ name: 'rTops'}" role="navigation" >ТОП 5</router-link></li>
+                <li>
+                  <router-link
+                    class="dropdown-item"
+                    :to="{ name: 'rBanlist' }"
+                    role="navigation"
+                    >Бан-лист</router-link
+                  >
+                </li>
+                <li>
+                  <router-link
+                    class="dropdown-item"
+                    :to="{ name: 'rTops' }"
+                    role="navigation"
+                    >ТОП 5</router-link
+                  >
+                </li>
               </ul>
             </li>
             <li class="nav-item button-head dropdown">
@@ -75,15 +102,18 @@
                 aria-labelledby="navbarDarkDropdownMenuLink"
               >
                 <li>
-                  <a class="dropdown-item" href="classic.html"
-                    >Classic 1.7.10</a
+                  <router-link
+                    class="dropdown-item"
+                    :to="{ name: 'rSclassic' }"
+                    role="navigation"
+                    >Classic 1.7.10</router-link
                   >
                 </li>
               </ul>
             </li>
             <li class="nav-item button-head">
               <div class="ico-buttonHead guild-ico"></div>
-              <a class="nav-link" aria-current="page" href="guilds.html"
+              <a class="nav-link" aria-current="page" href="#"
                 >Гильдии</a
               >
             </li>

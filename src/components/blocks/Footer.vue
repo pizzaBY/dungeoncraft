@@ -46,7 +46,7 @@
                             <a href="#!" class="text-footer">Команды</a>
                         </li>
                         <li>
-                            <a href="#!" class="text-footer">Начать игру</a>
+                            <router-link :to="{ name: 'rStart' }" class="text-footer">Начать игру</router-link>
                         </li>
                     </ul>
                 </div>
