@@ -1,19 +1,17 @@
-import { createApp } from 'vue'
-import App from './App.vue'
-import router from './router'
-import axios from 'axios';
-import moment from 'moment';
+import { createApp } from "vue";
+import App from "./App.vue";
+import router from "./router";
+import store from "./store";
+
+import moment from "moment";
 
 const app = createApp(App)
-var axiosInstance = axios.create({
-    baseURL: 'http://localhost:5050',
-    withCredentials: false
-    /* other custom settings */
-  });
+  .use(store)
+  .use(router);
 
-moment.locale("ru")
-app.config.globalProperties.$axios = axiosInstance;
+moment.locale("ru");
+
+
 app.config.globalProperties.$moment = moment;
 
-app.use(router)
-app.mount('#app')
+app.mount("#app");

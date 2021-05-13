@@ -1,31 +1,38 @@
 <template>
-  
-    <router-view>
-      
-    </router-view>
-  
-  <cModals/>
+  <router-view v-slot="{ Component }">
+   
+    <transition name="custom-classes-transition" >
+      <component :is="Component" />
+    </transition>
+  </router-view>
+
+  <cModals />
 </template>
 
 <script>
-import cModals from '@/components/Modals.vue'
+import cModals from "@/components/Modals.vue";
+
+import { mapActions } from "vuex";
 
 export default {
   components: {
-    cModals
-  }
-}
+    cModals,
+  },
+  created() {
+    this.checkLogin();
+  },
+  beforeMount() {
+    this.getMonitoring();
+    setInterval(() => {
+      this.getMonitoring();
+    }, 10000);
+  },
+  methods: {
+    ...mapActions([
+      "checkLogin",
+      "getMonitoring", // map `this.increment()` to `this.$store.dispatch('increment')`
+    ]),
+  },
+};
 </script>
-<style>
-.slide-fade-enter-active {
-        transition: all .3s ease;
-    }
-    .slide-fade-leave-active {
-        transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
-    }
-    .slide-fade-enter, .slide-fade-leave-to
-        /* .slide-fade-leave-active for <2.1.8 */ {
-        transform: translateX(10px);
-        opacity: 0;
-    }
-</style>
+<style></style>

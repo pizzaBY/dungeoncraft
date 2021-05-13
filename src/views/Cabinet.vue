@@ -1,7 +1,7 @@
 <template>
   <div>
     <cHeader />
-    <cServer />
+    <cCabinet />
     <cFooter />
     <!-- <img alt="Vue logo" src="../assets/logo.png"> -->
   </div>
@@ -10,14 +10,14 @@
 <script>
 // @ is an alias to /src
 import cHeader from "@/components/Header.vue";
-import cServer from "@/components/server/Classic.vue";
+import cCabinet from "@/components/Cabinet.vue";
 import cFooter from "@/components/blocks/Footer.vue";
 
 export default {
-  name: "pClassic",
+  name: "pCabinet",
   components: {
     cHeader,
-    cServer,
+    cCabinet,
     cFooter,
   },
 };

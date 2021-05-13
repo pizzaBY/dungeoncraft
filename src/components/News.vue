@@ -3,141 +3,50 @@
   <div class="container">
     <div class="row">
       <div class="col-8">
-        <div class="card-block" v-for="item in news" :key="item.news_id">
-          <div class="card-body">
-            <div class="d-flex">
+        <div v-if="this.news.length > 0">
+          <div class="card-block" v-for="item in this.news" :key="item.news_id">
+            <div class="card-body">
+              <div class="d-flex">
+                <img
+                  src="../assets/images/icons/news-icon.png"
+                  width="24"
+                  height="24"
+                  style="margin-top: 5px;margin-left: 10px;"
+                />
+                <h3 class="text-news">{{ item.news_name }}</h3>
+              </div>
               <img
-                src="../assets/images/icons/news-icon.png"
-                width="24"
-                height="24"
-                style="margin-top: 5px;margin-left: 10px;"
+                src="../assets/images/background/img2.jpg"
+                class="card-img-top"
               />
-              <h3 class="text-news">{{ item.news_name }}</h3>
-            </div>
-            <img
-              src="../assets/images/background/img2.jpg"
-              class="card-img-top"
-            />
-            <p class="subtext-news">
-              {{ newsSlice(item.news_text) }}
-            </p>
-            <div class="d-flex">
-              <p class="">
-                <img
-                  src="../assets/images/icons/date.png"
-                  width="16"
-                  height="16"
-                  style="margin-bottom: 3px; margin-left: 15px;"
-                />
-                {{ formatDate(item.news_time) }}
+              <p class="subtext-news">
+                {{ newsSlice(item.news_text) }}
               </p>
-              <!--<p style="margin-left: 30px;">
-                <img
-                  src="../assets/images/icons/eyes.png"
-                  width="16"
-                  height="16"
-                  style="margin-bottom: 3px;"
-                />
-                243
-              </p>-->
-              <a href="news.html" class="btn btn-warning button-news"
-                >Подробнее...</a
-              >
+              <div class="d-flex">
+                <p class="">
+                  <img
+                    src="../assets/images/icons/date.png"
+                    width="16"
+                    height="16"
+                    style="margin-bottom: 3px; margin-left: 15px;"
+                  />
+                  {{ formatDate(item.news_time) }}
+                </p>
+                <a href="news.html" class="btn btn-warning button-news"
+                  >Подробнее...</a
+                >
+              </div>
             </div>
           </div>
         </div>
-        <div class="card-block">
-          <div class="card-body">
-            <div class="d-flex">
-              <img
-                src="../assets/images/icons/news-icon.png"
-                width="24"
-                height="24"
-                style="margin-top: 5px;margin-left: 10px;"
-              />
-              <h3 class="text-news">Новая магическая сборка</h3>
-            </div>
-            <img
-              src="../assets/images/background/img1.jpg"
-              class="card-img-top"
-            />
-            <p class="subtext-news">
-              Добро пожаловать, новичок на наш сайт! В данной статье вы можете
-              ознакомиться со списком горячих обновлений за "Январь" месяц!
-              Читайте полную новость, и узнаете все актуальные моменты на
-              сегодняшний день!
-            </p>
-            <div class="d-flex">
-              <p>
-                <img
-                  src="../assets/images/icons/date.png"
-                  width="16"
-                  height="16"
-                  style="margin-bottom: 3px; margin-left: 15px;"
-                />
-                15 марта, 2021
-              </p>
-              <p style="margin-left: 30px;">
-                <img
-                  src="../assets/images/icons/eyes.png"
-                  width="16"
-                  height="16"
-                  style="margin-bottom: 3px;"
-                />
-                243
-              </p>
-              <a href="news.html" class="btn btn-warning button-news"
-                >Подробнее...</a
-              >
+        <div v-else>
+          <div class="card-block">
+            <div class="card-body">
+              Нет новостей :(
             </div>
           </div>
         </div>
-        <div class="card-block">
-          <div class="card-body">
-            <div class="d-flex">
-              <img
-                src="../assets/images/icons/news-icon.png"
-                width="24"
-                height="24"
-                style="margin-top: 5px;margin-left: 10px;"
-              />
-              <h3 class="text-news">Новая магическая сборка</h3>
-            </div>
-            <img
-              src="../assets/images/background/img2.jpg"
-              class="card-img-top"
-            />
-            <p class="subtext-news">
-              Добро пожаловать, новичок на наш сайт! В данной статье вы можете
-              ознакомиться со списком горячих обновлений за "Январь" месяц!
-              Читайте полную новость, и узнаете все актуальные моменты на
-              сегодняшний день!
-            </p>
-            <div class="d-flex">
-              <p class="">
-                <img
-                  src="../assets/images/icons/date.png"
-                  width="16"
-                  height="16"
-                  style="margin-bottom: 3px; margin-left: 15px;"
-                />
-                15 марта, 2021 
-              </p>
-              <!--<p style="margin-left: 30px;">
-                <img
-                  src="../assets/images/icons/eyes.png"
-                  width="16"
-                  height="16"
-                  style="margin-bottom: 3px;"
-                />
-                243
-              </p>-->
-              <a href="news.html" class="btn btn-warning button-news"
-                >Подробнее...</a
-              >
-            </div>
-          </div>
-        </div>
+
         <!-- Пагинация -->
         <div class="card-block mb-3">
           <div class="card-pagination"></div>
@@ -177,45 +86,9 @@
       <!-- Новости -->
 
       <div class="col-4">
+        
         <!-- Авторизация -->
-        <div class="card-block">
-          <div class="card-body justify-content-center">
-            <h3 class="text-sidebar">Авторизация</h3>
-            <div class="line-sidebar"></div>
-            <div class="d-flex justify-content-center bd-highlight">
-              <div class="p-2 bd-highlight">
-                <a
-                  type="button"
-                  data-bs-toggle="modal"
-                  data-bs-target="#modalauthorization"
-                  class="btn btn-warning btn-lg button-auto"
-                  >Авторизация</a
-                >
-              </div>
-              <div class="p-2 flex-shrink-1 bd-highlight">
-                <a
-                  type="button"
-                  data-bs-toggle="modal"
-                  data-bs-target="#modalclosed"
-                  class="btn btn-warning btn-lg button-lock"
-                  ><i class="bi-shield-lock"></i
-                ></a>
-              </div>
-            </div>
-
-            <div class="d-flex justify-content-center bd-highlight">
-              <div class="bd-highlight">
-                <a
-                  type="button"
-                  data-bs-toggle="modal"
-                  data-bs-target="#modalregister"
-                  class="btn btn-warning btn-lg button-reg"
-                  >Регистрация</a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
+        <cUserRight/>
         <!-- Авторизация -->
 
         <!-- Мониторинг -->
@@ -238,6 +111,9 @@
 import cSocial from "@/components/blocks/Social.vue";
 import cVoting from "@/components/blocks/Voting.vue";
 import cMonitoring from "@/components/blocks/Monitoring.vue";
+import cUserRight from "@/components/UserProfile.vue";
+
+import { mapState } from "vuex";
 
 export default {
   name: "News",
@@ -245,32 +121,30 @@ export default {
     cSocial,
     cVoting,
     cMonitoring,
+    cUserRight
   },
   data() {
-    return {
-      news: [],
-    };
+    return {};
   },
   methods: {
-      newsSlice(text) {
-          if (text.length > 120) {
-              return text.slice(0, 119) + "..."
-          }
-          return text
-      },
-      formatDate(text) {
-          text = this.$moment(text * 1000).format('DD MMMM, YYYY')
-          return text
+    newsSlice(text) {
+      if (text.length > 120) {
+        return text.slice(0, 119) + "...";
       }
+      return text;
+    },
+    formatDate(text) {
+      text = this.$moment(text * 1000).format("DD MMMM, YYYY");
+      return text;
+    },
   },
   beforeMount() {
-      this.$axios
-      .get('/api/news/get')
-      .then(response => (
-          this.news = response.data.data
-          ));
-      
-  }
+    this.$store.dispatch("getNews");
+  },
+  computed: mapState([
+    // map this.count to store.state.count
+    "news",
+  ]),
 };
 </script>
 

@@ -1,9 +1,11 @@
 <template>
-  <cHeader />
-  <cSliderTops />
-  <cTops />
-  <cFooter />
-  <!-- <img alt="Vue logo" src="../assets/logo.png"> -->
+  <div>
+    <cHeader />
+    <cSliderTops />
+    <cTops />
+    <cFooter />
+    <!-- <img alt="Vue logo" src="../assets/logo.png"> -->
+  </div>
 </template>
 
 <script>

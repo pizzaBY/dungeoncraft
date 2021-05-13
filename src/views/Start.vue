@@ -1,8 +1,10 @@
 <template>
-  <cHeader />
-  <cStart />
-  <cFooter />
-  <!-- <img alt="Vue logo" src="../assets/logo.png"> -->
+  <div>
+    <cHeader />
+    <cStart />
+    <cFooter />
+    <!-- <img alt="Vue logo" src="../assets/logo.png"> -->
+  </div>
 </template>
 
 <script>

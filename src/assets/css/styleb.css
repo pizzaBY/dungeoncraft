@@ -585,7 +585,7 @@ tbody, td, tfoot, th, thead, tr {
     display: flex;
     flex-direction: column;
     width: 720px;
-    /*height: 380px;*/
+    height: 380px;
     pointer-events: auto;
     background-color: #fff;
     background-clip: padding-box;
@@ -635,17 +635,17 @@ tbody, td, tfoot, th, thead, tr {
     border-radius: 25px;
 }
 .text-mod {
-    font-weight: 900;
-    color: #303030;
-    text-align: center;
+    font-weight: 900 !important;
+    color: #303030 !important;
+    text-align: center !important;
 }  
 .head-mod {
-    display: flex;
-    padding: 5px 10px;
+    display: flex !important;
+    padding: 5px 10px !important;
 } 
 .head-mod .close {
-    padding: 1rem 1rem;
-    margin: -1rem -1rem -1rem auto;
+    padding: 1rem 1rem !important;
+    margin: -1rem -1rem -1rem auto !important;
 }
 .form-check-input:checked {
     background-color: #ffba20;
@@ -700,9 +700,11 @@ tbody, td, tfoot, th, thead, tr {
 }
 .stocks-b2 {
     width: 190px;
+    height: 190px;
 }
 .stocks-b3 {
     width: 190px;
+    height: 190px;
     margin-left: 30px;
 }
 .donat-img {
@@ -743,7 +745,7 @@ tbody, td, tfoot, th, thead, tr {
     font-size: 36px;
     font-weight: 800;
     color: #303030;
-    /*padding-top: 70px;*/
+    padding-top: 55px;
 }
 .auchover-h5 {
     font-size: 30px;
@@ -752,26 +754,28 @@ tbody, td, tfoot, th, thead, tr {
     padding-top: 70px;
 }
 .price-button {
-    background-color: #e9eef7;
-    width: 80px;
-    height: 30px;
+    background-color: #b8a2f5;
+    width: 70px;
+    height: 25px;
     border-radius: 13px;
     margin: auto;
+    margin-top: -15px;
     text-align: center;
-    color: #7f1ef3;
-    font-weight: 900;
-    font-size: 20px;
+    color:#fff;
+    font-weight: 700;
+    font-size: 17px;
 }
 .price-button2 {
-    background-color: #e9eef7;
-    width: 80px;
-    height: 30px;
+    background-color: #92dd80;
+    width: 70px;
+    height: 25px;
     border-radius: 13px;
     margin: auto;
+    margin-top: -15px;
     text-align: center;
-    color: #7f1ef3;
-    font-weight: 900;
-    font-size: 20px;
+    color:#fff;
+    font-weight: 700;
+    font-size: 17px;
 }
 .discount-button {
     position: absolute;
@@ -786,7 +790,6 @@ tbody, td, tfoot, th, thead, tr {
     color:#fff;
     font-weight: 700;
 }
-
 .bg-donat {
     background-color: #fff;
     width: 220px;

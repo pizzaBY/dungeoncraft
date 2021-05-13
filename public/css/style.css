@@ -590,7 +590,7 @@ tbody, td, tfoot, th, thead, tr {
     display: flex;
     flex-direction: column;
     width: 720px;
-    height: 380px;
+    /*height: 380px;*/
     pointer-events: auto;
     background-color: #fff;
     background-clip: padding-box;
@@ -694,7 +694,8 @@ tbody, td, tfoot, th, thead, tr {
     display:none;
 }
 .card-stocks:hover .block-hover{
-    display:block;
+    display:flex;
+    flex-direction: column;
 }
 .stocks-h1 {
     font-size: 45px;
@@ -806,9 +807,7 @@ tbody, td, tfoot, th, thead, tr {
     text-align: center;
     box-shadow: 0px 0px 16.2px 1.8px rgb(0 0 0 / 7%);
 }
-.betw-donat {
-    padding-right: 30px;
-}
+
 .bg-donat:hover {
     background-color: #eea812;
     border: 1px solid transparent;
@@ -816,7 +815,7 @@ tbody, td, tfoot, th, thead, tr {
 }
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
     color: #fff;
-    background-color: #ffba20;
+    background-color: #ffba20 !important;
 }
 .under-services {
     padding: 40px;
@@ -990,8 +989,7 @@ tbody, td, tfoot, th, thead, tr {
     padding: 10px;
 }
 .button-rblock {
-    background-color: #969696;
-    border-radius: 25px;
+    background-color: #969696 !important;
     font-size: 16px;
     font-weight: 700;
     border: 1px solid transparent;

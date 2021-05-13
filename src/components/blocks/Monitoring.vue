@@ -5,7 +5,7 @@
       <div class="line-sidebar"></div>
       <div class="mb-3" style="max-width: 540px;">
         <div class="row g-0">
-          <div class="col-12" v-for="item in servers" :key="item.server_id">
+          <div class="col-12" v-for="item in this.servers" :key="item.server_id">
             <div class="row g-0">
               <div
                 class="pt-3 col-md-4 d-flex justify-content-center align-middle"
@@ -20,7 +20,8 @@
               <div class="col-md-8">
                 <div class="card-body">
                   <h5 class="name-server">{{ item.server_name }}</h5>
-                  <p class="sub-server">Онлайн {{ item.server_players }}/{{ item.server_maxplayers }}</p>
+                  <p class="sub-server" v-if="item.server_maxplayers > 0">Онлайн {{ item.server_players }}/{{ item.server_maxplayers }}</p>
+                  <p class="sub-server" v-else>Выключен</p>
                   <div class="progress">
                     <div
                       class="progress-bar"
@@ -45,18 +46,22 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
+
 export default {
   name: "Monitoring",
   data() {
     return {
-      servers: [],
+  
     };
   },
   beforeMount() {
-    this.$axios
-      .get("/api/servers/getAll")
-      .then((response) => (this.servers = response.data.data));
+
   },
+  computed: mapState([
+    // map this.count to store.state.count
+    "servers",
+  ]),
 };
 </script>
 

@@ -1,27 +1,27 @@
 <template>
- <cHeader />
- <cSliderRules />
-  <cRulesBlock/>
- <cFooter/>
+  <div>
+    <cHeader />
+    <cSliderRules />
+    <cRulesBlock />
+    <cFooter />
     <!-- <img alt="Vue logo" src="../assets/logo.png"> -->
-    
+  </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import cHeader from '@/components/Header.vue'
-import cSliderRules from '@/components/SliderRules.vue'
-import cFooter from '@/components/blocks/Footer.vue'
-import cRulesBlock from '@/components/blocks/Rules.vue'
-
+import cHeader from "@/components/Header.vue";
+import cSliderRules from "@/components/SliderRules.vue";
+import cFooter from "@/components/blocks/Footer.vue";
+import cRulesBlock from "@/components/blocks/Rules.vue";
 
 export default {
-  name: 'pRules',
+  name: "pRules",
   components: {
     cHeader,
     cSliderRules,
     cRulesBlock,
-    cFooter
-  }
-}
+    cFooter,
+  },
+};
 </script>
