@@ -9,6 +9,7 @@ import Tops from "../views/Tops.vue";
 import Start from "../views/Start.vue";
 import Classic from "../views/servers/Classic.vue";
 import Cabinet from "../views/Cabinet.vue";
+import Product from "../views/Product.vue";
 
 const routes = [
   {
@@ -50,6 +51,14 @@ const routes = [
     path: "/cabinet",
     name: "rCabinet",
     component: Cabinet,
+    meta: { 
+      requiresAuth: true
+    }
+  },
+  {
+    path: "/product/:orderId(\\d+)",
+    name: "rProduct",
+    component: Product,
     meta: { 
       requiresAuth: true
     }

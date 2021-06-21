@@ -2,7 +2,7 @@
   <!-- Новости --><br />
   <div class="container">
     <div class="row">
-      <div class="col-8">
+      <div class="col-sm-12 col-md-8">
         <div v-if="this.news.length > 0">
           <div class="card-block" v-for="item in this.news" :key="item.news_id">
             <div class="card-body">
@@ -85,7 +85,7 @@
 
       <!-- Новости -->
 
-      <div class="col-4">
+      <div class="col-sm-12 col-md-4">
         
         <!-- Авторизация -->
         <cUserRight/>
@@ -113,7 +113,7 @@ import cVoting from "@/components/blocks/Voting.vue";
 import cMonitoring from "@/components/blocks/Monitoring.vue";
 import cUserRight from "@/components/UserProfile.vue";
 
-import { mapState } from "vuex";
+import { mapState, mapActions } from "vuex";
 
 export default {
   name: "News",
@@ -137,9 +137,12 @@ export default {
       text = this.$moment(text * 1000).format("DD MMMM, YYYY");
       return text;
     },
+    ...mapActions([
+      "getNews",
+    ])
   },
   beforeMount() {
-    this.$store.dispatch("getNews");
+    this.getNews();
   },
   computed: mapState([
     // map this.count to store.state.count

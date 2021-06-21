@@ -3,162 +3,14 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-4">
-        <div class="card-block">
-          <div class="row g-0">
-            <div
-              class="pt-3 col-md-4 d-flex justify-content-center align-middle"
-            >
-              <img
-                src="../assets/images/icons/profile.png"
-                width="100"
-                height="100"
-              />
-              <div class="icon-dev"></div>
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="name-server">
-                  {{ this.user.user_firstname }} {{ this.user.user_lastname }}
-                  <span class="badge bg-success">Online</span>
-                </h5>
-                <p class="sub-server">{{ this.getGroup }}</p>
-                <div class="d-flex justify-content-between">
-                  <div class="name-server">
-                    {{ this.user.user_coin }}
-                    <img
-                      src="../assets/images/icons/coin.png"
-                      width="24"
-                      height="24"
-                      title="Количество ваших Койнов"
-                    />
-                  </div>
-
-                  <div class="name-server pe-5">
-                    {{ this.user.user_efir }}
-                    <img
-                      src="../assets/images/icons/efir.png"
-                      width="24"
-                      height="24"
-                      title="Количество ваших Эфиров"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="d-flex justify-content-center bd-highlight">
-              <div class="p-2 bd-highlight">
-                <a
-                  type="button"
-                  data-bs-toggle="modal"
-                  data-bs-target="#modalclosed"
-                  class="btn btn-warning btn-lg button-auto"
-                  >Проверить сообщения</a
-                >
-              </div>
-              <div class="p-2 flex-shrink-1 bd-highlight">
-                <a type="button" class="btn btn-warning btn-lg button-lock"
-                  ><i class="bi bi-gear"></i
-                ></a>
-              </div>
-              <div class="p-2 flex-shrink-1 bd-highlight">
-                <a
-                  type="button"
-                  data-bs-toggle="modal"
-                  data-bs-target="#modalgoout"
-                  class="btn btn-warning btn-lg button-lock"
-                  ><i class="bi bi-door-open-fill"></i
-                ></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="card-block">
-          <div class="row g-0">
-            <div
-              class="pt-3 col-md-4 d-flex justify-content-center align-middle"
-            >
-              <img
-                src="https://dungeoncraft.ru/uploads/skin.php?type=head&name=eltazaris&1616711932776"
-                width="64"
-                height="64"
-                style="border-radius: 10px;"
-              />
-              <div class="icon-star"></div>
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="name-server">
-                  {{ this.user.user_name }}
-                  <span class="badge bg-danger">Developer</span>
-                </h5>
-                <p class="sub-server">Сейчас в игре: <b>----</b></p>
-                <a
-                  id="pills-settings-tab"
-                data-bs-toggle="pill"
-                href="#pills-settings"
-                role="tab"
-                aria-controls="pills-settings"
-                aria-selected="false"
-                  type="button"
-                  class="btn btn-warning btn-lg button-vote"
-                  >История
-                  <img
-                    src="../assets/images/icons/shopping.png"
-                    width="24"
-                    height="24"
-                /></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="card-block">
-          <div class="pt-3 d-flex justify-content-center">
-            <h3 class="font-weight9">Ваш персонаж:</h3>
-          </div>
-          <div class="pb-4 d-flex justify-content-center">
-            <img
-              src="../assets/images/cabinet/skin1.png"
-              width="112"
-              height="224"
-              alt=""
-              class="skin-background"
-            />
-            <img
-              src="../assets/images/cabinet/skin2.png"
-              width="112"
-              height="224"
-              alt=""
-              class="skin-background ml-3"
-            />
-          </div>
-          <div class="d-flex justify-content-center">
-            <a
-              href="#"
-              type="button"
-              data-bs-toggle="modal"
-              data-bs-target="#modalskin"
-              class="btn btn-warning btn-lg button-cabinet"
-              >Изменить скин</a
-            >
-          </div>
-          <div class="pb-2 d-flex justify-content-center">
-            <a
-              href="#"
-              type="button"
-              data-bs-toggle="modal"
-              data-bs-target="#modalcloack"
-              class="btn btn-warning btn-lg button-cabinet"
-              >Изменить плащ</a
-            >
-          </div>
-        </div>
+        <cLeftSide />
       </div>
       <div class="col-sm-8">
         <div class="card-block">
           <ul class="nav nav-pills p-3" id="pills-tab" role="tablist">
             <li class="nav-item flex-fill px-3" role="presentation">
               <a
-                class="nav-link button-rblock rounded-pill active"
+                class="nav-link button-rblock active"
                 id="pills-info-tab"
                 data-bs-toggle="pill"
                 href="#pills-info"
@@ -170,7 +22,7 @@
             </li>
             <li class="nav-item flex-fill px-3" role="presentation">
               <a
-                class="nav-link button-rblock rounded-pill"
+                class="nav-link button-rblock"
                 id="pills-eco-tab"
                 data-bs-toggle="pill"
                 href="#pills-eco"
@@ -182,7 +34,7 @@
             </li>
             <li class="nav-item flex-fill px-3" role="presentation">
               <a
-                class="nav-link button-rblock rounded-pill"
+                class="nav-link button-rblock"
                 id="pills-guild-tab"
                 data-bs-toggle="pill"
                 href="#pills-guild"
@@ -194,7 +46,19 @@
             </li>
             <li class="nav-item flex-fill px-3" role="presentation">
               <a
-                class="nav-link button-rblock rounded-pill"
+                class="nav-link button-rblock"
+                id="pills-payments-tab"
+                data-bs-toggle="pill"
+                href="#payments-tab"
+                role="tab"
+                aria-controls="payments-tab"
+                aria-selected="false"
+                >История</a
+              >
+            </li>
+            <li class="nav-item flex-fill px-3" role="presentation">
+              <a
+                class="nav-link button-rblock"
                 id="pills-settings-tab"
                 data-bs-toggle="pill"
                 href="#pills-settings"
@@ -214,19 +78,17 @@
               aria-labelledby="pills-info-tab"
             >
               <div class="d-flex p-3">
-                <div class="" style="width: 20rem;">
+                <div class="" style="width: 20rem">
                   <div class="card-body">
                     <div class="d-flex justify-content-between">
                       <h6 class="card-title">15 уровень:</h6>
-                      <h6 class="card-title">
-                        5 из 30 exp
-                      </h6>
+                      <h6 class="card-title">5 из 30 exp</h6>
                     </div>
-                    <div class="progress" style="height: 6px;">
+                    <div class="progress" style="height: 6px">
                       <div
                         class="progress-bar bg-success"
                         role="progressbar"
-                        style="width: 25%;"
+                        style="width: 25%"
                         aria-valuenow="25"
                         aria-valuemin="0"
                         aria-valuemax="100"
@@ -236,14 +98,16 @@
                     <div class="d-flex justify-content-between">
                       <h6 class="card-title">Нарушения:</h6>
                       <h6 class="card-title">
-                        {{ this.user.user_bans}} из 10
+                        {{ this.user.user_bans }} из 10
                       </h6>
                     </div>
-                    <div class="progress" style="height: 6px;">
+                    <div class="progress" style="height: 6px">
                       <div
                         class="progress-bar bg-danger"
                         role="progressbar"
-                        :style="'width:'+(this.user.user_bans/10)*100+'%'"
+                        :style="
+                          'width:' + (this.user.user_bans / 10) * 100 + '%'
+                        "
                         aria-valuenow="25"
                         aria-valuemin="0"
                         aria-valuemax="100"
@@ -254,33 +118,43 @@
                       Игровой ник: <b>{{ this.user.user_name }}</b>
                     </h6>
                     <h6 class="card-title">
-                      Статус аккаунта: <b :class="getStatusClass">{{ this.getStatus }}</b>
+                      Статус аккаунта:
+                      <b :class="getStatusClass">{{ this.getStatus }}</b>
                     </h6>
                     <h6 class="card-title">
                       Ваша почта: <b>{{ this.user.user_email }}</b>
                     </h6>
                     <h6 class="card-title">
-                      Гильдия: <a href="#">BloodKnight</a>
+                      Гильдия:
+                      <div v-for="item in factions" :key="item.server">
+                        <span>{{ item.server }}: </span
+                        ><span v-if="item.name == ''">не в гильдии</span
+                        ><span v-else>{{ item.name }}</span>
+                      </div>
                     </h6>
                   </div>
                 </div>
                 <div
                   class=""
-                  style="width: 20rem; margin-left: 1rem!important;"
+                  style="width: 20rem; margin-left: 1rem !important"
                 >
                   <div class="card-body">
                     <h6 class="card-title">Пол персонажа: <b>Мужской</b></h6>
                     <h6 class="card-title">
-                      Дата регистрации: <b>{{ formatDate(this.user.user_reg)}}</b>
+                      Дата регистрации:
+                      <b>{{ formatDate(this.user.user_reg) }}</b>
                     </h6>
                     <h6 class="card-title">
-                      Последний онлайн: <b>{{ formatDate(this.user.user_online)}}</b>
+                      Последний онлайн:
+                      <b>{{ formatDate(this.user.user_online) }}</b>
                     </h6>
                     <h6 class="card-title">
-                      Часов в игре: <b>{{ humanizeDate(this.user.user_playedall )}}</b>
+                      Часов в игре:
+                      <b>{{ humanizeDate(this.user.user_playedall) }}</b>
                     </h6>
                     <h6 class="card-title">
-                      Часов за месяц: <b>{{ humanizeDate(this.user.user_playedmonth )}}</b>
+                      Часов за месяц:
+                      <b>{{ humanizeDate(this.user.user_playedmonth) }}</b>
                     </h6>
                     <h6 class="card-title">
                       Привел игроков:
@@ -295,7 +169,7 @@
                   </div>
                 </div>
               </div>
-              <div class="mb-1 p-3" style="max-width: auto;">
+              <div class="mb-1 p-3" style="max-width: auto">
                 <div class="row g-0">
                   <div class="col-md-12">
                     <div class="" style="max-width: auto">
@@ -622,13 +496,13 @@
                 />
                 от их пополнений.
               </p>
-              <div class="mb-3" style="max-width: auto;">
+              <div class="mb-3" style="max-width: auto">
                 <div class="row g-0">
                   <div class="col-md-12">
                     <div class="card-body">
                       <div class="input-group justify-content-center">
                         <input
-                          style="width: 450px;"
+                          style="width: 450px"
                           type="text"
                           class="form-input"
                           id="formGroupExampleInput"
@@ -658,7 +532,7 @@
               <p class="fsub-text">
                 При полонении <b>1</b> российский рубль = <b>1 Эфиру</b>
               </p>
-              <div class="card-eco mb-3" style="max-width: auto;">
+              <div class="card-eco mb-3" style="max-width: auto">
                 <div class="row g-0">
                   <div class="col-md-4 p-4">
                     <img
@@ -680,9 +554,10 @@
                           class="form-outline mb-3 d-flex justify-content-center"
                         >
                           <input
-                            type="text"
+                            type="number"
                             class="form-input"
-                            id="formGroupExampleInput"
+                            id="formsum"
+                            v-model="form_sum"
                             placeholder="введите сумму"
                           />
                         </div>
@@ -692,7 +567,8 @@
                           <input
                             type="text"
                             class="form-input"
-                            id="formGroupExampleInput"
+                            id="formpromo"
+                            v-model="form_promo"
                             placeholder="введите промо-код"
                           />
                         </div>
@@ -701,6 +577,12 @@
                             <a
                               type="button"
                               class="btn btn-warning btn-lg button-vote"
+                              @click="
+                                getPaymentURL({
+                                  sum: form_sum,
+                                  promo: form_promo,
+                                })
+                              "
                               >Пополнить</a
                             >
                           </div>
@@ -714,7 +596,7 @@
               <p class="fsub-text">
                 При переводе между игроками комиссия <b>3%</b>
               </p>
-              <div class="card-eco mb-3" style="max-width: auto;">
+              <div class="card-eco mb-3" style="max-width: auto">
                 <div class="row g-0">
                   <div class="col-md-4 p-4">
                     <img
@@ -770,7 +652,7 @@
               <p class="fsub-text">
                 При обмене: <b>1 Эфир = 10 Gold Coin's</b>
               </p>
-              <div class="card-eco mb-3" style="max-width: auto;">
+              <div class="card-eco mb-3" style="max-width: auto">
                 <div class="row g-0">
                   <div class="col-md-4 p-4">
                     <img
@@ -798,7 +680,7 @@
                             placeholder="введите сумму"
                           />
                         </div>
-                        <h5 style="text-align: center;" class="name-server">
+                        <h5 style="text-align: center" class="name-server">
                           Вы получите: 100 Gold Coins
                         </h5>
                         <div class="d-flex justify-content-center bd-highlight">
@@ -822,11 +704,11 @@
               role="tabpanel"
               aria-labelledby="pills-guild-tab"
             >
-              <div class="mb-3" style="max-width: auto;">
+              <div class="mb-3" style="max-width: auto">
                 <div class="row g-0">
                   <div class="col-md-8">
                     <div class="card-body">
-                      <h5 class="name-server">Гильдии</h5>
+                      <h5 class="name-server">Гильдия</h5>
                       <p class="card-text">
                         Гильдия представляет собой объединение игроков с общими
                         интересами, предназначенное для совместного выполнения
@@ -869,6 +751,40 @@
               </div>
             </div>
             <div
+              class="tab-pane p-3 fade"
+              id="payments-tab"
+              role="tabpanel"
+              aria-labelledby="pills-payments-tab"
+            >
+              <div class="mb-3" style="max-width: auto">
+                <div class="row g-0">
+                  <div class="col-md-12">
+                    <div class="card-body">
+                      <h5 class="name-server">История платежей</h5>
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col" class="text-center">#</th>
+                            <th scope="col" class="text-center">Сумма</th>
+                            <th scope="col" class="text-center">Дата</th>
+                            <th scope="col" class="text-center">Промокод</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th class="text-center">1</th>
+                            <td class="text-center">100 р.</td>
+                            <td class="text-center">08.06.2021</td>
+                            <td class="text-center">CODE</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
               class="tab-pane fade p-3"
               id="pills-settings"
               role="tabpanel"
@@ -890,10 +806,10 @@
                       role="tab"
                       aria-controls="v-pills-home"
                       aria-selected="true"
-                      style="width: 115px; height: 115px;"
+                      style="width: 115px; height: 115px"
                     >
                       <div class="settings-icon1"></div>
-                      <p style="margin-left: 5px;">Обличие</p>
+                      <p style="margin-left: 5px">Обличие</p>
                     </a>
                     <a
                       class="mt-3 nav-link button-settings"
@@ -903,10 +819,10 @@
                       role="tab"
                       aria-controls="v-pills-profile"
                       aria-selected="false"
-                      style="width: 115px; height: 115px;"
+                      style="width: 115px; height: 115px"
                     >
                       <div class="settings-icon2"></div>
-                      <p style="margin-left: 8px;">Данные</p>
+                      <p style="margin-left: 8px">Данные</p>
                     </a>
                     <a
                       class="mt-3 nav-link button-settings"
@@ -916,10 +832,10 @@
                       role="tab"
                       aria-controls="v-pills-messages"
                       aria-selected="false"
-                      style="width: 115px; height: 115px;"
+                      style="width: 115px; height: 115px"
                     >
                       <div class="settings-icon3"></div>
-                      <p style="margin-left: 10px;">Защита</p>
+                      <p style="margin-left: 10px">Защита</p>
                     </a>
                     <a
                       class="mt-3 nav-link button-settings"
@@ -929,10 +845,10 @@
                       role="tab"
                       aria-controls="v-pills-settings"
                       aria-selected="false"
-                      style="width: 115px; height: 115px;"
+                      style="width: 115px; height: 115px"
                     >
                       <div class="settings-icon4"></div>
-                      <p style="margin-left: 7px;">Помощь</p>
+                      <p style="margin-left: 7px">Помощь</p>
                     </a>
                   </div>
                 </div>
@@ -1056,7 +972,7 @@
                         </div>
                         <div class="d-flex pt-3">
                           <h3
-                            style="margin-top: 6px; margin-right: 20px;"
+                            style="margin-top: 6px; margin-right: 20px"
                             class="name-server"
                           >
                             Подтвердите выбор:
@@ -1078,7 +994,7 @@
                     >
                       <img
                         src="../assets/images/background/img2.jpg"
-                        style="border-radius: 5px;"
+                        style="border-radius: 5px"
                         class="card-img-top"
                       />
                       <h3 class="name-server pt-3">Ваши данные и контакты:</h3>
@@ -1156,26 +1072,57 @@
 </template>
 
 <script>
-import { mapState, mapGetters } from "vuex";
+import { mapState, mapGetters, mapActions } from "vuex";
+import cLeftSide from "@/components/cabinet/LeftSide.vue";
+
 
 export default {
   name: "cCabinet",
+  components: {
+    cLeftSide,
+  },
+  data() {
+    return {
+      form_sum: "",
+      form_promo: "",
+    };
+  },
   computed: {
     ...mapState([
       // map this.count to store.state.count
       "user",
+      "factions",
     ]),
     ...mapGetters(["getGroup", "getStatus", "getStatusClass"]),
   },
   methods: {
+    ...mapActions([
+      "getPaymentURL",
+      "setAvatar",
+      "checkLogin",
+      "getLogout", // проксирует `this.increment()` в `this.$store.dispatch('increment')`
+    ]),
     formatDate(text) {
       text = this.$moment(text * 1000).format("DD.MM.YYYY");
       return text;
     },
     humanizeDate(text) {
-        text = this.$moment.utc(this.$moment.duration(text, "minutes").asMilliseconds()).format("HH ч mm м")
+      text = this.$moment
+        .utc(this.$moment.duration(text, "minutes").asMilliseconds())
+        .format("HH ч mm м");
       //text = this.$moment.duration("-65", "minutes").humanize({d: 7, w: 4});
       return text;
+    },
+    async onChangeAvatar(event) {
+      const file = event.target.files[0];
+
+      var formData = new FormData();
+      formData.append("file", file);
+
+      let data = await this.setAvatar(formData);
+      this.checkLogin();
+
+      console.log(data);
     },
   },
 };

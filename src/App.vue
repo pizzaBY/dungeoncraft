@@ -20,6 +20,7 @@ export default {
   },
   created() {
     this.checkLogin();
+    this.getProducts();
   },
   beforeMount() {
     this.getMonitoring();
@@ -30,6 +31,7 @@ export default {
   methods: {
     ...mapActions([
       "checkLogin",
+      "getProducts",
       "getMonitoring", // map `this.increment()` to `this.$store.dispatch('increment')`
     ]),
   },

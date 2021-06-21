@@ -6,9 +6,9 @@
     </div>
 
     <div class="row">
-      <div class="col-8">
+      <div class="col-8 d-flex align-items-stretch">
         <div class="row d-flex align-items-stretch">
-          <div class="col-6 d-flex align-items-stretch mb-3">
+          <div class="col-6 d-flex align-items-stretch mb-4">
             <a href="#" class="d-flex align-items-stretch w-100">
               <div class="card-stocks w-100">
                 <div
@@ -30,7 +30,7 @@
                     />
                   </div>
                   <div class="col-md-8 d-flex flex-column align-self-center">
-                    <h2 class="auc-name d-flex align-self-center">Аукцион</h2>
+                    <h2 class="auc-name d-flex align-self-start">Аукцион</h2>
                     <p class="auc-text d-flex align-self-center">
                       Торгуйтесь с другими игроками!
                     </p>
@@ -40,8 +40,8 @@
             </a>
           </div>
           <div
-            class="col-md-3 d-flex col-sm-12 align-self-stretch align-items-stretch mb-3"
-            v-for="n in 10"
+            class="col-md-3 d-flex col-sm-12 align-self-stretch align-items-stretch mb-4"
+            v-for="n in 6"
             :key="n"
           >
             <a
@@ -78,15 +78,15 @@
 
                     <div class="col-12 d-flex">
                       <p class="donat-name">
-                        Привилегия<br />"VIP" <br v-if="n % 2" />
-                        {{ n }}
+                        Привилегия<br />"VIP"
+                   
                       </p>
                     </div>
 
                     <div
                       class="col-12 mb-3 d-flex justify-content-center my-auto"
                     >
-                      <div class="d-flex justify-content-center align-middle px-2 py-1 text-light btn-price rounded-pill fw-bold">
+                      <div class="d-flex justify-content-center align-middle px-3 py-1 text-light btn-price rounded-pill fw-bonus-bold">
                         115<img
                           src="../../assets/images/icons/efir.png"
                           width="24"
@@ -101,7 +101,7 @@
           </div>
         </div>
       </div>
-      <div class="col-4">
+      <div class="col-4 d-flex align-items-stretch">
         <div class="row">
           <div class="col-12">
             <a href="#" data-toggle="modal" data-target="#modalbuy">
@@ -131,7 +131,7 @@
                     <div class="d-flex flex-column h-100">
                       <div class="d-flex flex-column justify-content-center align-middle h-100"><h5 class="auc-name">1500<br />Gold Coin's</h5></div>
                       
-                      <div class="col-5 d-flex justify-content-center align-middle px-2 py-1 text-light btn-price rounded-pill fw-bold">
+                      <div class="col-5 d-flex justify-content-center align-middle px-2 py-1 text-light btn-price rounded-pill fw-bonus-bold">
                         45<img
                           src="../../assets/images/icons/efir.png"
                           width="24"
@@ -170,7 +170,7 @@
           </div>
           <div class="col-12">
             <a href="https://vk.com/dungeon.craft" target="_blank">
-              <div class="card-stocks mb-3">
+              <div class="card-stocks mb-2">
                 <div class="row g-0 pt-3 pb-3">
                   <div class="col-md-4 d-flex justify-content-center p-3 my-auto">
                     <img

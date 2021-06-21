@@ -11,24 +11,27 @@
                 <div
                   class="pt-3 col-md-4 d-flex justify-content-center align-middle"
                 >
-                  <img
-                    :src="
-                      'uploads/' +
-                        item.user_avatar +
-                        '.png'
-                    "
-                    class="rounded-circle"
-                    width="100"
-                    height="100"
-                    v-if="item.user_avatar != 0"
-                  />
-                  <img
-                    src="../../assets/images/icons/profile.png"
-                    width="100"
-                    height="100"
-                    v-else
-                  />
-                  <div class="icon-dev"></div>
+                  <div class="">
+          <img
+            src="../../assets/images/icons/profile.png"
+            width="100"
+            height="100"
+            class="rounded-circle"
+            v-if="item.user_avatar == false"
+          />
+          <img
+            :src="'uploads/avatars/' + item.user_name + '.png'"
+            width="100"
+            height="100"
+            class="rounded-circle"
+            v-else
+          />
+          <div class="position-relative">
+            <div class="position-absolute bottom-0 end-0">
+              <div class="icon-dev"></div>
+            </div>
+          </div>
+        </div>
                 </div>
                 <div class="col-md-8">
                   <div class="card-body">

@@ -5,10 +5,10 @@
     <!-- Сетка контейнера -->
     <div class="container p-4">
       <div class="row align-items-center">
-        <div class="col">
+        <div class="col px-5">
           <img
             src="../../assets/images/footerlogo.png"
-            class="card-img-top logo-footer scalelogo"
+            class="card-img-top logo-footer scalelogo d-flex mx-auto px-auto"
           />
           <h3 class="ftext-dc">DungeonCraft</h3>
           <p class="fsub-text">Уникальный проект для тебя и твоих друзей</p>
@@ -81,12 +81,12 @@
 
     <!-- Копирайт -->
     <div>
-      <div class="p-3 copyr-text">
+      <div class="p-3 copyr-text text-center">
         © 2021 DungeonCraft - Все права защищены.
         <a class="foot-pad" href="/"
           ><img src="../../assets/images/creators.png" width="173"
         /></a>
-         <span class="float-end">v{{ this.version }}</span>
+         <span class="float-end">v{{ this.FrontVersion() }}</span>
       </div>
      
     </div>
@@ -97,12 +97,8 @@
 </template>
 
 <script>
-import { mapState } from "vuex";
 
 export default {
-  computed: mapState([
-    // map this.count to store.state.count
-    "version",
-  ]),
+
 };
 </script>

@@ -5,7 +5,7 @@
     <div
       id="MySlider"
       class="carousel slide"
-       data-bs-ride="carousel"
+       data-bs-ride="carousel"  
     >
       <ol class="carousel-indicators">
         <li
@@ -23,8 +23,8 @@
           <div class="decor-bzz3 box1 bounce-2"></div>
           <div class="decor-bzz4 box1 bounce-2"></div>
           <div class="row justify-content-center">
-            <div class="col-7">
-              <div class="style-slider">
+            <div class="d-flex col-xs-12 col-md-7">
+              <div class="mx-auto my-auto text-center text-md-start">
                 <h1 class="font-weight9">
                   УНИКАЛЬНЫЙ ПРОЕКТ<br />ДЛЯ ТЕБЯ И ТВОИХ ДРУЗЕЙ
                 </h1>
@@ -43,7 +43,7 @@
                 ></router-link>
               </div>
             </div>
-            <div class="col-5 d-flex">
+            <div class="col-xs-12 col-md-5 d-flex">
               <img
                 class="box bounce-2 img-logo"
                 src="../assets/images/logo.png"
@@ -53,8 +53,8 @@
         </div>
         <div class="carousel-item">
           <div class="row justify-content-center">
-            <div class="col-7">
-              <div class="style-slider">
+            <div class="d-flex col-xs-12 col-md-7 text-center text-md-start">
+              <div class="mx-auto my-auto">
                 <h1 class="font-weight9">
                   ТРЕЙЛЕР<br />КЛАССИЧЕСКОГО СЕРВЕРА!
                 </h1>
@@ -73,7 +73,7 @@
                 ></a>
               </div>
             </div>
-            <div style="padding-bottom: 187px" class="col-5 d-flex">
+            <div style="padding-bottom: 187px" class="col-xs-12 col-md-5 d-flex">
               <iframe
                 style="margin-top: 100px; border-radius: 25px"
                 width="560"
@@ -88,8 +88,8 @@
         </div>
         <div class="carousel-item">
           <div class="row justify-content-center">
-            <div class="col-7">
-              <div class="style-slider">
+            <div class="d-flex col-xs-12 col-md-7 text-center text-md-start">
+              <div class="mx-auto my-auto">
                 <h1 class="font-weight9">СТАНЬ УСПЕШНЫМ<br />ТОРГОВЦЕМ!</h1>
                 <br />
                 <h2>
@@ -106,7 +106,7 @@
                 ></router-link>
               </div>
             </div>
-            <div class="col-5 d-flex">
+            <div class="col-xs-12 col-md-5 d-flex">
               <img
                 class="box bounce-2 img-logo"
                 src="../assets/images/logo2.png"

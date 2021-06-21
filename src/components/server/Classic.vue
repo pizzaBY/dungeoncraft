@@ -85,7 +85,7 @@
                         src="../../assets/images/icons/mods/shop.png"
                         width="24"
                         height="24"
-                        style="margin: auto;"
+                        class="my-auto"
                       />
                       <button
                         class="btn btn-link btn-block text-left"
@@ -121,7 +121,7 @@
                         src="../../assets/images/icons/mods/trade.png"
                         width="24"
                         height="24"
-                        style="margin: auto;"
+                        class="my-auto"
                       />
                       <button
                         class="btn btn-link btn-block text-left collapsed"
@@ -160,7 +160,7 @@
                         src="../../assets/images/icons/mods/custom.png"
                         width="24"
                         height="24"
-                        style="margin: auto;"
+                       class="my-auto"
                       />
                       <button
                         class="btn btn-link btn-block text-left collapsed"
@@ -193,7 +193,7 @@
                         src="../../assets/images/icons/mods/smiles.png"
                         width="24"
                         height="24"
-                        style="margin: auto;"
+                        class="my-auto"
                       />
                       <button
                         class="btn btn-link btn-block text-left collapsed"
@@ -232,7 +232,7 @@
                         src="../../assets/images/icons/mods/exp.png"
                         width="24"
                         height="24"
-                        style="margin: auto;"
+                        class="my-auto"
                       />
                       <button
                         class="btn btn-link btn-block text-left"
@@ -260,7 +260,7 @@
                         src="../../assets/images/icons/mods/redstone.png"
                         width="24"
                         height="24"
-                        style="margin: auto;"
+                        class="my-auto"
                       />
                       <button
                         class="btn btn-link btn-block text-left collapsed"
@@ -289,7 +289,7 @@
                         src="../../assets/images/icons/mods/lavacrem.png"
                         width="24"
                         height="24"
-                        style="margin: auto;"
+                        class="my-auto"
                       />
                       <button
                         class="btn btn-link btn-block text-left collapsed"
@@ -318,7 +318,7 @@
                         src="../../assets/images/icons/mods/star.png"
                         width="24"
                         height="24"
-                        style="margin: auto;"
+                        class="my-auto"
                       />
                       <button
                         class="btn btn-link btn-block text-left collapsed"
@@ -355,7 +355,7 @@
             id="accordionFlushExample"
           >
             <div
-              class="accordion-item"
+              class=""
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#flush-collapseOne"
@@ -395,7 +395,7 @@
               </div>
             </div>
             <div
-              class="accordion-item"
+              class=""
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#flush-collapseTwo"
@@ -465,7 +465,7 @@
               </div>
             </div>
             <div
-              class="accordion-item"
+              class=""
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#flush-collapseThree"
@@ -513,7 +513,7 @@
               </div>
             </div>
             <div
-              class="accordion-item"
+              class=""
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#flush-collapseFour"
@@ -630,7 +630,7 @@
           <div class="card-body">
             <h3 class="text-sidebar">Новые моды для 1.7.10..</h3>
             <img src="../../assets/images/background/img4.jpg" class="card-img-top" />
-            <p class="subtext-news">
+            <p class="subtext-news text-justify">
               Добро пожаловать, новичок на наш сайт! В данной статье вы можете
               ознакомиться со списком горячих обновлений за "Январь" месяц...
             </p>

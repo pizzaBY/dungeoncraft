@@ -1,9 +1,13 @@
 <template>
   <div class="container mb-5">
-    <ul class="nav nav-pills mb-5 d-flex justify-content-between" id="pills-tab" role="tablist">
+    <ul
+      class="nav nav-pills mb-5 d-flex justify-content-between"
+      id="pills-tab"
+      role="tablist"
+    >
       <li class="nav-item" role="presentation">
         <a
-          class="nav-link active btn bg-donat"
+          class="nav-link active bg-donat"
           id="pills-home-tab"
           data-bs-toggle="pill"
           data-bs-target="#pills-home"
@@ -64,15 +68,10 @@
               >Показать все...</a
             >
           </li>
-          <li>
-            <a class="dropdown-item" @click="ChangeServer('classic')"
-              >Classic</a
-            >
-          </li>
-          <li>
-            <a class="dropdown-item" @click="ChangeServer('magicrpg')"
-              >Magic and RPG</a
-            >
+          <li v-for="item in this.servers" :key="item.server_id">
+            <a class="dropdown-item" @click="ChangeServer(item.server_id)">{{
+              item.server_name
+            }}</a>
           </li>
         </ul>
       </li>
@@ -85,56 +84,67 @@
         aria-labelledby="pills-home-tab"
       >
         <div class="row">
-          <div class="col-sm-2 pb-4" v-show="activeServer == 'all' || activeServer == 'classic'" v-for="n in 6" :key="n">
-            <a href="#" data-toggle="modal" data-target="#modalbuy">
-              <div class="card-stocks stocks-b2">
-                <div class="block-hover">
-                  <h1 class="auchover-h5">Купить</h1>
-                </div>
-                <div class="discount-button">15%</div>
-                <img
-                  src="../../assets/images/donat/vip.png"
-                  class="card-img-top donat-img"
-                  alt="..."
-                />
-                <div class="price-button2">
-                  50<img
-                    src="../../assets/images/icons/ruble.png"
-                    width="14"
-                    height="14"
+          <template v-for="item in this.products" :key="item.product_id">
+            <div
+              class="col-sm-2 pb-4"
+              v-show="
+                activeServer == 'all' || activeServer == item.product_server
+              "
+              v-if="item.product_type == 1"
+            >
+              <a href="#" data-toggle="modal" data-target="#modalbuy">
+                <div class="card-stocks stocks-b2">
+                  <div class="block-hover">
+                    <h1 class="auchover-h5">Купить</h1>
+                  </div>
+                  <div class="discount-button" v-if="item.product_discount > 0">
+                    {{ item.product_discount }}%
+                  </div>
+                  <img
+                    src="../../assets/images/donat/vip.png"
+                    class="card-img-top donat-img"
+                    alt="..."
                   />
+                  <div class="">
+                    <p class="donat-name" v-html="item.product_name"></p>
+                  </div>
+                  <div
+                    class="col-12 mb-3 d-flex justify-content-center my-auto"
+                  >
+                    <div
+                      class="d-flex justify-content-center align-middle px-3 py-1 text-light btn-price rounded-pill fw-bonus-bold"
+                    >
+                      <template
+                        v-if="
+                          item.product_discount > 0 &&
+                          item.product_discount < 100
+                        "
+                      >
+                        {{
+                          this.CalculateDiscount(
+                            item.product_price,
+                            item.product_discount
+                          )
+                        }}
+                        <div class="ms-1 old-price">
+                          <s> {{ item.product_price }}</s>
+                        </div>
+                      </template>
+                      <template v-else>
+                        <div>{{ item.product_price }}</div>
+                      </template>
+
+                      <img
+                        src="../../assets/images/icons/efir.png"
+                        width="24"
+                        height="24"
+                      />
+                    </div>
+                  </div>
                 </div>
-                <div class="">
-                  <p class="donat-name">Вип {{ n }}</p>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-sm-2 pb-4" v-show="activeServer == 'all' || activeServer == 'magicrpg'">
-            <a href="#" data-toggle="modal" data-target="#modalbuy">
-              <div class="card-stocks stocks-b2">
-                <div class="block-hover">
-                  <h1 class="auchover-h5">Купить</h1>
-                </div>
-                <div class="discount-button">15%</div>
-                <img
-                  src="../../assets/images/donat/vip.png"
-                  class="card-img-top donat-img"
-                  alt="..."
-                />
-                <div class="price-button2">
-                  50<img
-                    src="../../assets/images/icons/ruble.png"
-                    width="14"
-                    height="14"
-                  />
-                </div>
-                <div class="">
-                  <p class="donat-name">Вип MGRP</p>
-                </div>
-              </div>
-            </a>
-          </div>
+              </a>
+            </div>
+          </template>
         </div>
       </div>
       <div
@@ -143,7 +153,69 @@
         role="tabpanel"
         aria-labelledby="pills-profile-tab"
       >
-        2
+        <div class="row">
+          <template v-for="item in this.products" :key="item.product_id">
+            <div
+              class="col-sm-2 pb-4"
+              v-show="
+                activeServer == 'all' || activeServer == item.product_server
+              "
+              v-if="item.product_type == 2"
+            >
+              <a href="#" data-toggle="modal" data-target="#modalbuy">
+                <div class="card-stocks stocks-b2">
+                  <div class="block-hover">
+                    <h1 class="auchover-h5">Купить</h1>
+                  </div>
+                  <div class="discount-button" v-if="item.product_discount > 0">
+                    {{ item.product_discount }}%
+                  </div>
+                  <img
+                    src="../../assets/images/donat/vip.png"
+                    class="card-img-top donat-img"
+                    alt="..."
+                  />
+                  <div class="">
+                    <p class="donat-name" v-html="item.product_name"></p>
+                  </div>
+                  <div
+                    class="col-12 mb-3 d-flex justify-content-center my-auto"
+                  >
+                    <div
+                      class="d-flex justify-content-center align-middle px-3 py-1 text-light btn-price rounded-pill fw-bonus-bold"
+                    >
+                      <template
+                        v-if="
+                          item.product_discount > 0 &&
+                          item.product_discount < 100
+                        "
+                      >
+                        {{
+                          this.CalculateDiscount(
+                            item.product_price,
+                            item.product_discount
+                          )
+                        }}
+                        <div class="ms-1 old-price">
+                          <s> {{ item.product_price }}</s>
+                        </div>
+                      </template>
+                      <template v-else>
+                        <div>{{ item.product_price }}</div>
+                      </template>
+
+                      <img
+                        src="../../assets/images/icons/efir.png"
+                        width="24"
+                        height="24"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </template>
+        </div>
       </div>
       <div
         class="tab-pane fade"
@@ -151,7 +223,69 @@
         role="tabpanel"
         aria-labelledby="pills-contact-tab"
       >
-        3
+        <div class="row">
+          <template v-for="item in this.products" :key="item.product_id">
+            <div
+              class="col-sm-2 pb-4"
+              v-show="
+                activeServer == 'all' || activeServer == item.product_server
+              "
+              v-if="item.product_type == 3"
+            >
+              <a href="#" data-toggle="modal" data-target="#modalbuy">
+                <div class="card-stocks stocks-b2">
+                  <div class="block-hover">
+                    <h1 class="auchover-h5">Купить</h1>
+                  </div>
+                  <div class="discount-button" v-if="item.product_discount > 0">
+                    {{ item.product_discount }}%
+                  </div>
+                  <img
+                    src="../../assets/images/donat/vip.png"
+                    class="card-img-top donat-img"
+                    alt="..."
+                  />
+                  <div class="">
+                    <p class="donat-name" v-html="item.product_name"></p>
+                  </div>
+                  <div
+                    class="col-12 mb-3 d-flex justify-content-center my-auto"
+                  >
+                    <div
+                      class="d-flex justify-content-center align-middle px-3 py-1 text-light btn-price rounded-pill fw-bonus-bold"
+                    >
+                      <template
+                        v-if="
+                          item.product_discount > 0 &&
+                          item.product_discount < 100
+                        "
+                      >
+                        {{
+                          this.CalculateDiscount(
+                            item.product_price,
+                            item.product_discount
+                          )
+                        }}
+                        <div class="ms-1 old-price">
+                          <s> {{ item.product_price }}</s>
+                        </div>
+                      </template>
+                      <template v-else>
+                        <div>{{ item.product_price }}</div>
+                      </template>
+
+                      <img
+                        src="../../assets/images/icons/efir.png"
+                        width="24"
+                        height="24"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </template>
+        </div>
       </div>
       <div
         class="tab-pane fade"
@@ -159,13 +293,77 @@
         role="tabpanel"
         aria-labelledby="gold-coins-tab"
       >
-        4
+        <div class="row">
+          <template v-for="item in this.products" :key="item.product_id">
+            <div
+              class="col-sm-2 pb-4"
+              v-show="
+                activeServer == 'all' || activeServer == item.product_server
+              "
+              v-if="item.product_type == 4"
+            >
+              <a href="#" data-toggle="modal" data-target="#modalbuy">
+                <div class="card-stocks stocks-b2">
+                  <div class="block-hover">
+                    <h1 class="auchover-h5">Купить</h1>
+                  </div>
+                  <div class="discount-button" v-if="item.product_discount > 0">
+                    {{ item.product_discount }}%
+                  </div>
+                  <img
+                    src="../../assets/images/donat/vip.png"
+                    class="card-img-top donat-img"
+                    alt="..."
+                  />
+                  <div class="">
+                    <p class="donat-name" v-html="item.product_name"></p>
+                  </div>
+                  <div
+                    class="col-12 mb-3 d-flex justify-content-center my-auto"
+                  >
+                    <div
+                      class="d-flex justify-content-center align-middle px-3 py-1 text-light btn-price rounded-pill fw-bonus-bold"
+                    >
+                      <template
+                        v-if="
+                          item.product_discount > 0 &&
+                          item.product_discount < 100
+                        "
+                      >
+                        {{
+                          this.CalculateDiscount(
+                            item.product_price,
+                            item.product_discount
+                          )
+                        }}
+                        <div class="ms-1 old-price">
+                          <s> {{ item.product_price }}</s>
+                        </div>
+                      </template>
+                      <template v-else>
+                        <div>{{ item.product_price }}</div>
+                      </template>
+
+                      <img
+                        src="../../assets/images/icons/efir.png"
+                        width="24"
+                        height="24"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </template>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import { mapState } from "vuex";
+
 export default {
   name: "cDonates",
   data() {
@@ -179,5 +377,12 @@ export default {
       this.activeServer = server;
     },
   },
+  beforeMount() {},
+  mounted() {},
+  computed: mapState([
+    // map this.count to store.state.count
+    "products",
+    "servers",
+  ]),
 };
 </script>

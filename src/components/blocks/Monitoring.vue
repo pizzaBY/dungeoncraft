@@ -39,8 +39,8 @@
         </div>
       </div>
       <div class="line-sidebar"></div>
-      <h5 class="mon-text">Рекорд за сутки: 25</h5>
-      <h5 class="mon-text">Абсолютный рекорд: 147</h5>
+      <h5 class="mon-text">Рекорд за сутки: {{ this.stats.players_day }}</h5>
+      <h5 class="mon-text">Абсолютный рекорд: {{ this.stats.players_total }}</h5>
     </div>
   </div>
 </template>
@@ -61,6 +61,7 @@ export default {
   computed: mapState([
     // map this.count to store.state.count
     "servers",
+    "stats"
   ]),
 };
 </script>

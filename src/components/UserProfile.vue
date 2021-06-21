@@ -43,12 +43,27 @@
   <div class="card-block" v-else>
     <div class="row g-0">
       <div class="pt-3 col-md-4 d-flex justify-content-center align-middle">
-        <img
-          src="../assets/images/icons/profile.png"
-          width="100"
-          height="100"
-        />
-        <div class="icon-dev"></div>
+        <div class="">
+          <img
+            src="../assets/images/icons/profile.png"
+            width="100"
+            height="100"
+            class="rounded-circle"
+            v-if="this.user.user_avatar == false"
+          />
+          <img
+            :src="'/uploads/avatars/' + this.user.user_name + '.png'"
+            width="100"
+            height="100"
+            class="rounded-circle"
+            v-else
+          />
+          <div class="position-relative">
+            <div class="position-absolute bottom-0 end-0">
+              <div class="icon-dev"></div>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="col-md-8">
         <div class="card-body">
@@ -57,8 +72,8 @@
             <span class="badge bg-success">Online</span>
           </h5>
           <p class="sub-server">
-              {{ this.getGroup }}
-        </p>
+            {{ this.getGroup }}
+          </p>
           <div class="d-flex justify-content-between">
             <div class="name-server">
               {{ this.user.user_coin }}
@@ -69,7 +84,7 @@
                 title="Количество ваших Койнов"
               />
             </div>
-            <div class="name-server pe-5">
+            <div class="name-server">
               {{ this.user.user_efir }}
               <img
                 src="../assets/images/icons/efir.png"
@@ -81,13 +96,15 @@
           </div>
         </div>
       </div>
-      <div class="d-flex justify-content-center bd-highlight">
-        <div class="p-2 bd-highlight">
-          <router-link :to="{ name: 'rCabinet' }" class="btn btn-warning btn-lg button-auto"
+      <div class="d-flex justify-content-center bd-highlight px-2">
+        <div class="p-2 p-md-2 bd-highlight flex-fill">
+          <router-link
+            :to="{ name: 'rCabinet' }"
+            class="btn btn-warning btn-lg button-auto w-100"
             >Личный кабинет</router-link
           >
         </div>
-        <div class="p-2 flex-shrink-1 bd-highlight">
+        <div class="p-1 p-md-2 flex-shrink-1 bd-highlight">
           <div class="">
             <div class="icon-sms"></div>
             <a type="button" class="btn btn-warning btn-lg button-lock"
@@ -95,11 +112,12 @@
             ></a>
           </div>
         </div>
-        <div class="p-2 flex-shrink-1 bd-highlight">
+        <div class="p-1 p-md-2 flex-shrink-1 bd-highlight">
           <a
             type="button"
             data-toggle="modal"
             data-target="#modalgoout"
+            @click="this.getLogout()"
             class="btn btn-warning btn-lg button-lock"
             ><i class="bi bi-door-open-fill"></i
           ></a>
@@ -111,21 +129,24 @@
 </template>
 
 <script>
-import { mapState,mapGetters  } from "vuex";
+import { mapState, mapGetters, mapActions } from "vuex";
 
 export default {
   name: "cUserRight",
   data() {
     return {};
   },
+  methods: {
+    ...mapActions([
+      "getLogout", // проксирует `this.increment()` в `this.$store.dispatch('increment')`
+    ]),
+  },
   computed: {
     ...mapState([
       // map this.count to store.state.count
       "user",
     ]),
-    ...mapGetters([
-      "getGroup",
-    ]),
+    ...mapGetters(["getGroup"]),
   },
 };
 </script>

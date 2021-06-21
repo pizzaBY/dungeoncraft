@@ -318,7 +318,7 @@ tbody, td, tfoot, th, thead, tr {
     border: 1px solid transparent;
     color: #ffffff;
 }
-.icon-dev {
+/*.icon-dev {
     position: absolute;
     background-image: url(../images/icons/dev.png);
     background-repeat: no-repeat;
@@ -326,7 +326,7 @@ tbody, td, tfoot, th, thead, tr {
     height: 24px;
     margin-top: 70px;
     margin-left: 70px;
-}
+}*/
 .icon-moder {
     position: absolute;
     background-image: url(../images/icons/moder.png);
@@ -797,12 +797,12 @@ tbody, td, tfoot, th, thead, tr {
     font-weight: 700;
 }
 .bg-donat {
-    background-color: #fff;
+    background-color: #fff !important;
     width: 220px;
-    border-radius: 10px;
+    border-radius: 5px !important;
     font-size: 16px;
     font-weight: 700;
-    border: 1px solid transparent;
+    border: 1px solid transparent !important;
     color: #d2d2d2;
     text-align: center;
     box-shadow: 0px 0px 16.2px 1.8px rgb(0 0 0 / 7%);
@@ -999,7 +999,7 @@ tbody, td, tfoot, th, thead, tr {
 }
 .button-rblock:hover {
     background-color: #303030;
-    border: 1px solid transparent;
+    border: 0px solid transparent;
     color: #ffffff;
 }
 .card-eco {

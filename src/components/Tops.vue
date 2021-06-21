@@ -40,10 +40,10 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
+                  <tr v-for="(item, index) in topstats.voters" :key="item.user_id">
                     <th style="padding-left: 35px;" scope="row">
                       <img
-                        src="../assets/images/icons/numbers/1.png"
+                        :src="'../images/icons/numbers/'+ (index + 1) +'.png'"
                         width="24"
                         height="24"
                       />
@@ -51,91 +51,27 @@
                     <td>
                       <img
                         style="padding: 5px; border-radius: 35px;"
-                        src="https://dungeoncraft.ru/uploads/skin.php?type=head&name=eltazaris&1615894316"
+                        src="../assets/images/icons/profile.png"
                         width="64"
                         class=""
-                      /><a href="#" style="color:#303030">Eltazaris</a>
-                    </td>
-                    <td style="text-align: center;">42</td>
-                  </tr>
-                  <tr>
-                    <th style="padding-left: 35px;" scope="row">
-                      <img
-                        src="../assets/images/icons/numbers/2.png"
-                        width="24"
-                        height="24"
+                        v-if="item.user_avatar == false"
                       />
-                    </th>
-                    <td>
                       <img
                         style="padding: 5px; border-radius: 35px;"
-                        src="https://dungeoncraft.ru/uploads/skin.php?type=head&name=pizza&1615904438"
+                        :src="'/uploads/avatars/' + item.user_name + '.png'"
                         width="64"
                         class=""
-                      /><a href="#" style="color:#303030">pizza</a>
+                        v-else
+                      /><a href="#" style="color:#303030">{{ item.user_name }}</a>
                     </td>
-                    <td style="text-align: center;">38</td>
-                  </tr>
-                  <tr>
-                    <th style="padding-left: 35px;" scope="row">
-                      <img
-                        src="../assets/images/icons/numbers/3.png"
-                        width="24"
-                        height="24"
-                      />
-                    </th>
-                    <td>
-                      <img
-                        style="padding: 5px; border-radius: 35px;"
-                        src="https://dungeoncraft.ru/uploads/skin.php?type=head&name=Lonely_Wolf&1615904438"
-                        width="64"
-                        class=""
-                      /><a href="#" style="color:#303030">Lonely_Wolf</a>
-                    </td>
-                    <td style="text-align: center;">22</td>
-                  </tr>
-                  <tr>
-                    <th style="padding-left: 35px;" scope="row">
-                      <img
-                        src="../assets/images/icons/numbers/4.png"
-                        width="24"
-                        height="24"
-                      />
-                    </th>
-                    <td>
-                      <img
-                        style="padding: 5px; border-radius: 35px;"
-                        src="https://dungeoncraft.ru/uploads/skin.php?type=head&name=Yummy&1615904438"
-                        width="64"
-                        class=""
-                      /><a href="#" style="color:#303030">Yummy</a>
-                    </td>
-                    <td style="text-align: center;">42</td>
-                  </tr>
-                  <tr>
-                    <th style="padding-left: 35px;" scope="row">
-                      <img
-                        src="../assets/images/icons/numbers/5.png"
-                        width="24"
-                        height="24"
-                      />
-                    </th>
-                    <td>
-                      <img
-                        style="padding: 5px; border-radius: 35px;"
-                        src="https://dungeoncraft.ru/uploads/skin.php?type=head&name=JiLee&1615904438"
-                        width="64"
-                        class=""
-                      /><a href="#" style="color:#303030">JiLee</a>
-                    </td>
-                    <td style="text-align: center;">38</td>
+                    <td style="text-align: center;">{{ item.user_votes }}</td>
                   </tr>
                 </tbody>
               </table>
             </div>
-            <div class="line-sidebar"></div>
-            <h5 class="mon-text">Голосов за сутки: 82</h5>
-            <h5 class="mon-text">Голосов за месяц: 1474</h5>
+            <!--<div class="line-sidebar"></div>
+            <h5 class="mon-text">Голосов за сутки: 0</h5>
+            <h5 class="mon-text">Голосов за месяц: 0</h5>-->
           </div>
         </div>
       </div>
@@ -167,102 +103,38 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
+                  <tr v-for="(item, index) in topstats.online" :key="item.user_id">
                     <th style="padding-left: 35px;" scope="row">
                       <img
-                        src="../assets/images/icons/numbers/1.png"
+                        :src="'../images/icons/numbers/'+ (index + 1) +'.png'"
                         width="24"
                         height="24"
                       />
                     </th>
                     <td>
-                      <img
+                     <img
                         style="padding: 5px; border-radius: 35px;"
-                        src="https://dungeoncraft.ru/uploads/skin.php?type=head&name=eltazaris&1615894316"
+                        src="../assets/images/icons/profile.png"
                         width="64"
                         class=""
-                      /><a href="#" style="color:#303030">Eltazaris</a>
-                    </td>
-                    <td style="text-align: center;">1д. 47м.</td>
-                  </tr>
-                  <tr>
-                    <th style="padding-left: 35px;" scope="row">
-                      <img
-                        src="../assets/images/icons/numbers/2.png"
-                        width="24"
-                        height="24"
+                        v-if="item.user_avatar == false"
                       />
-                    </th>
-                    <td>
                       <img
                         style="padding: 5px; border-radius: 35px;"
-                        src="https://dungeoncraft.ru/uploads/skin.php?type=head&name=pizza&1615904438"
+                        :src="'/uploads/avatars/' + item.user_name + '.png'"
                         width="64"
                         class=""
-                      /><a href="#" style="color:#303030">pizza</a>
+                        v-else
+                      /><a href="#" style="color:#303030">{{ item.user_name }}</a>
                     </td>
-                    <td style="text-align: center;">15ч. 13м.</td>
-                  </tr>
-                  <tr>
-                    <th style="padding-left: 35px;" scope="row">
-                      <img
-                        src="../assets/images/icons/numbers/3.png"
-                        width="24"
-                        height="24"
-                      />
-                    </th>
-                    <td>
-                      <img
-                        style="padding: 5px; border-radius: 35px;"
-                        src="https://dungeoncraft.ru/uploads/skin.php?type=head&name=Lonely_Wolf&1615904438"
-                        width="64"
-                        class=""
-                      /><a href="#" style="color:#303030">Lonely_Wolf</a>
-                    </td>
-                    <td style="text-align: center;">9ч. 55м.</td>
-                  </tr>
-                  <tr>
-                    <th style="padding-left: 35px;" scope="row">
-                      <img
-                        src="../assets/images/icons/numbers/4.png"
-                        width="24"
-                        height="24"
-                      />
-                    </th>
-                    <td>
-                      <img
-                        style="padding: 5px; border-radius: 35px;"
-                        src="https://dungeoncraft.ru/uploads/skin.php?type=head&name=Yummy&1615904438"
-                        width="64"
-                        class=""
-                      /><a href="#" style="color:#303030">Yummy</a>
-                    </td>
-                    <td style="text-align: center;">7ч. 1м.</td>
-                  </tr>
-                  <tr>
-                    <th style="padding-left: 35px;" scope="row">
-                      <img
-                        src="../assets/images/icons/numbers/5.png"
-                        width="24"
-                        height="24"
-                      />
-                    </th>
-                    <td>
-                      <img
-                        style="padding: 5px; border-radius: 35px;"
-                        src="https://dungeoncraft.ru/uploads/skin.php?type=head&name=JiLee&1615904438"
-                        width="64"
-                        class=""
-                      /><a href="#" style="color:#303030">JiLee</a>
-                    </td>
-                    <td style="text-align: center;">55м.</td>
+                    <td style="text-align: center;">{{ humanizeDate(item.user_time) }}</td>
                   </tr>
                 </tbody>
               </table>
             </div>
-            <div class="line-sidebar"></div>
-            <h5 class="mon-text">Онлайн за сутки: 25</h5>
-            <h5 class="mon-text">Рекорд за месяц: 154</h5>
+            <!--<div class="line-sidebar"></div>
+             <h5 class="mon-text">Онлайн за сутки: 0</h5>
+            <h5 class="mon-text">Рекорд за месяц: 0</h5> -->
           </div>
         </div>
       </div>
@@ -305,7 +177,7 @@
                     <td>
                       <img
                         style="padding: 5px; border-radius: 35px;"
-                        src="https://dungeoncraft.ru/uploads/skin.php?type=head&name=eltazaris&1615894316"
+                        src="../assets/images/icons/profile.png"
                         width="64"
                         class=""
                       /><a href="#" style="color:#303030">Eltazaris</a>
@@ -323,7 +195,7 @@
                     <td>
                       <img
                         style="padding: 5px; border-radius: 35px;"
-                        src="https://dungeoncraft.ru/uploads/skin.php?type=head&name=pizza&1615904438"
+                        src="../assets/images/icons/profile.png"
                         width="64"
                         class=""
                       /><a href="#" style="color:#303030">pizza</a>
@@ -341,7 +213,7 @@
                     <td>
                       <img
                         style="padding: 5px; border-radius: 35px;"
-                        src="https://dungeoncraft.ru/uploads/skin.php?type=head&name=Lonely_Wolf&1615904438"
+                        src="../assets/images/icons/profile.png"
                         width="64"
                         class=""
                       /><a href="#" style="color:#303030">Lonely_Wolf</a>
@@ -359,7 +231,7 @@
                     <td>
                       <img
                         style="padding: 5px; border-radius: 35px;"
-                        src="https://dungeoncraft.ru/uploads/skin.php?type=head&name=Yummy&1615904438"
+                        src="../assets/images/icons/profile.png"
                         width="64"
                         class=""
                       /><a href="#" style="color:#303030">Yummy</a>
@@ -377,7 +249,7 @@
                     <td>
                       <img
                         style="padding: 5px; border-radius: 35px;"
-                        src="https://dungeoncraft.ru/uploads/skin.php?type=head&name=JiLee&1615904438"
+                        src="../assets/images/icons/profile.png"
                         width="64"
                         class=""
                       /><a href="#" style="color:#303030">JiLee</a>
@@ -387,9 +259,9 @@
                 </tbody>
               </table>
             </div>
-            <div class="line-sidebar"></div>
-            <h5 class="mon-text">Убийств за сутки: 345</h5>
-            <h5 class="mon-text">Убийств за месяц: 2474</h5>
+            <!--<div class="line-sidebar"></div>
+             <h5 class="mon-text">Убийств за сутки: 0</h5>
+            <h5 class="mon-text">Убийств за месяц: 0</h5> -->
           </div>
         </div>
       </div>
@@ -397,3 +269,29 @@
   </div>
   <!-- ТОПЫ -->
 </template>
+
+<script>
+import { mapActions, mapState } from "vuex";
+export default {
+  methods: {
+    ...mapActions([
+      "getTopStats"
+    ]),
+    humanizeDate(text) {
+      text = this.$moment
+        .utc(this.$moment.duration(text, "minutes").asMilliseconds())
+        .format("HH ч mm м");
+      //text = this.$moment.duration("-65", "minutes").humanize({d: 7, w: 4});
+      return text;
+    },
+  },
+  beforeMount() {
+    this.getTopStats()
+  },
+  computed:{
+    ...mapState([
+      "topstats"
+    ])
+  }
+}
+</script>

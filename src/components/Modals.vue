@@ -22,8 +22,8 @@
         </div>
         <div class="modal-body d-flex justify-content-center">
           <div class="card-sign">
-            <div class="card-body">
-              <div class="modal-logo p-3 pt-4">
+            <div class="card-body p-0 p-md-2">
+              <div class="modal-logo p-3 pt-4 mx-auto">
                 <img
                   src="../assets/images/headerlogo.png"
                   width="74"
@@ -81,7 +81,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="alert alert-danger" v-if="this.error == 'badcredentials'" role="alert">
+                <div class="alert alert-danger alert-error fs-6" v-if="this.error == 'badcredentials'" role="alert">
                   Неправильный логин или пароль
                 </div>
                 <div class="alert alert-warning" v-if="this.error == 'unknown'" role="alert">

@@ -18,7 +18,7 @@
       id="accordionFlushExample"
     >
       <div
-        class="accordion-item"
+        class=""
         type="button"
         data-bs-toggle="collapse"
         data-bs-target="#flush-collapseOne"
@@ -75,7 +75,7 @@
         </div>
       </div>
       <div
-        class="accordion-item"
+        class=""
         type="button"
         data-bs-toggle="collapse"
         data-bs-target="#flush-collapseTwo"
@@ -119,7 +119,7 @@
         </div>
       </div>
       <div
-        class="accordion-item"
+        class=""
         type="button"
         data-bs-toggle="collapse"
         data-bs-target="#flush-collapseThree"
@@ -176,7 +176,7 @@
         </div>
       </div>
       <div
-        class="accordion-item"
+        class=""
         type="button"
         data-bs-toggle="collapse"
         data-bs-target="#flush-collapseFour"
